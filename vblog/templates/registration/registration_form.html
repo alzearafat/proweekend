@@ -1,0 +1,58 @@
+{% extends "registration/base.html" %}
+{% block title %}Register | Proffesional Weekend!{% endblock %}
+{% block content %}
+
+<div class="register-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-4">
+        <div class="account-box animated fadeInUp">
+
+          {% if form.errors %}
+          <div class="alert alert-danger" role="alert">Perbaiki error dibawah ini :</div>
+          {% endif %}
+
+          <div class="logo ">
+            <h4>REGISTER</h4>
+          </div>
+          <form class="form-signin" method="post" action="?next={{ next|default:"/videos" }}">{% csrf_token %}
+            <div class="form-group">
+              {% if form.username.errors %} 
+                <div class="has-error">{{ form.username.errors.as_text }}</div>
+              {% endif %}
+              <input id="id_username" type="text" name="username" class="form-control" placeholder="username" required autofocus /></input>
+            </div>
+            <div class="form-group">
+              {% if form.email.errors %} 
+                <div class="has-error">{{ form.email.errors.as_text }}</div>
+              {% endif %}
+              <input id="id_email" type="email" name="email" class="form-control" placeholder="Email" required /></input>
+            </div>
+            <div class="form-group">
+              {% if form.password1.errors %}
+                <div class="has-error">{{ form.password1.errors.as_text }}</div>
+              {% endif %}
+              <input id="id_password1" type="password" name="password1" class="form-control" placeholder="Password" required /></input>
+            </div>
+            <div class="form-group">
+              {% if form.password2.errors %}
+                <div class="has-error">{{ form.password2.errors.as_text }}</div>
+              {% endif %}
+              <input id="id_password2" type="password" name="password2" class="form-control" placeholder="Password (Type again)" required /></input>
+            </div>
+            <input type="submit" value="Daftar" class="btn btn-lg btn-block purple-bg"></input>
+          </form>
+          <div class="or-box row-block">
+            <div class="row">
+              <div class="col-md-12 row-block">
+                <p style="color: #7f8c8d !important;">Sudah punya account?</p>
+                <a href="/accounts/login/" class="btn btn-primary btn-block">Masuk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

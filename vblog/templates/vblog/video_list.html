@@ -1,0 +1,51 @@
+{% extends "vblog/base-archive.html" %}
+{% block title %}Videos Archive | Proffesional Weekend!{% endblock %}
+{% block content %}
+<!-- SECTION VIDEOS -->
+<div class="body-wrapper-videos">
+	<div class="container">
+		<div class="row">
+			<div class="strike">
+			<span><h4>VIDEOS ARCHIVE</h4></span>
+			</div>
+			{% for video in videos %}
+			<div class="col-md-3 col-sm-12">
+				<div class="thumbnail content-thumbnail">
+					<img alt="" src="/vblog/media/{{ video.featured_image }}">
+					<div class="caption">
+						<h4>{{ video.title }}</h4>
+						<a class="btn btn-dark-side btn-block" href="{% url "video_detail" pk=video.pk %}"><i class="fa fa-play-circle-o fa-lg"></i> Watch</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<nav>
+				  <ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- EOC -->
+{% endblock %}

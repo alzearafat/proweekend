@@ -1,0 +1,92 @@
+{% extends "vblog/base-single.html" %}
+{% block title %}{{ video.title }} | Proffesional Weekend!{% endblock %}
+
+{% block content %}
+<div class="video-single-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="video-container">
+					<iframe src="{{video.iframe_src}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<p><a href="{{ video.vimeo_page }}">{{ video.title }}, by Pewe</a></p>
+					<a href="{{ video.vimeo_page }}" class="btn btn-dark-side">Tonton di Vimeo</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="video-tabs">
+				  <!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a href="#deskripsi" aria-controls="deskripsi" role="tab" data-toggle="tab">Deskripsi</a></li>
+				    <li role="presentation"><a href="#info-lain" aria-controls="info-lain" role="tab" data-toggle="tab">Info Lain</a></li>
+				    <li role="presentation"><a href="#gallery" aria-controls="gallery" role="tab" data-toggle="tab">Gallery</a></li>
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+				    <div role="tabpanel" class="tab-pane active" id="deskripsi">
+				    	<div class="deskripsi">
+				    		<div class="social-sharer">
+					    		<p>
+					    			<h5>- Share the <i class="fa fa-heart"></i> -</h5>
+						    		<div class="btn-group" role="group" aria-label="...">
+									  <button type="button" class="btn fb-button"><i class="fa fa-facebook fa-lg"></i> Facebook</button>
+									  <button type="button" class="btn btn-info"><i class="fa fa-twitter fa-lg"></i> Twitter</button>
+									  <button type="button" class="btn btn-danger"><i class="fa fa-google fa-lg"></i> Google</button>
+									</div>
+								</p>
+							</div>
+							<p><h4>~ {{ video.title }}</h4></p>
+				    		{{ video.content | safe }}
+				    	</div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="info-lain">
+				    	<div class="info-lain">
+				    		<div class="row">
+				    			<div class="col-md-4 col-sm-12">
+				    				<div class="info-item"><i class="fa fa-map-marker fa-lg"></i> {{ video.location }}</div>
+				    			</div>
+				    			<div class="col-md-4 col-sm-12">
+				    				<div class="info-item"><i class="fa fa-money fa-lg"></i> {{ video.HTM }}</div>
+				    			</div>
+				    			<div class="col-md-4 col-sm-12">
+				    				<div class="info-item"><i class="fa fa-calendar fa-lg"></i> {{ video.pubdate }}</div>
+				    			</div>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="gallery">
+				    	<div class="gallery">
+				    		<div class="row">
+				    			<div class="col-md-3 col-sm-12">
+				    				<div class="gallery-single">
+				    					<a href="/vblog/media/{{ video.gallery_image_1 }}" data-lightbox="gallery-image" data-title="{{ video.title }} 1"><img src="/vblog/media/{{ video.gallery_image_1 }}" /></a>
+				    				</div>
+				    			</div>
+				    			<div class="col-md-3 col-sm-12">
+				    				<div class="gallery-single">
+				    					<a href="/vblog/media/{{ video.gallery_image_2 }}" data-lightbox="gallery-image" data-title="{{ video.title }} 2"><img src="/vblog/media/{{ video.gallery_image_2 }}" /></a>
+				    				</div>
+				    			</div>
+				    			<div class="col-md-3 col-sm-12">
+				    				<div class="gallery-single">
+				    					<a href="/vblog/media/{{ video.gallery_image_3 }}" data-lightbox="gallery-image" data-title="{{ video.title }} 3"><img src="/vblog/media/{{ video.gallery_image_3 }}" /></a>
+				    				</div>
+				    			</div>
+				    			<div class="col-md-3 col-sm-12">
+				    				<div class="gallery-single">
+				    					<a href="/vblog/media/{{ video.gallery_image_3 }}" data-lightbox="gallery-image" data-title="{{ video.title }} 4"><img src="/vblog/media/{{ video.gallery_image_3 }}" /></a>
+				    				</div>
+				    			</div>
+				    		</div>
+				    	</div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

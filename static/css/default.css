@@ -1,0 +1,169 @@
+/*
+ * Buttons
+**/
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 3px;
+    border:0 !important;
+}
+
+.btn-lg {
+    padding: 14px 25px;
+    font-size: 14px;
+}
+
+.btn-sm,
+.btn-xs {
+    padding: 8px 10px;
+    font-size: 10px;
+    border-radius: 2px;
+}
+.btn-xs{
+    border-radius: 1.5px;
+}
+
+.btn-xs {
+    padding: 5px 8px;
+}
+
+.btn{
+    border: 0;
+}
+
+.btn-default,
+.flat-default, .flat-default.btn-bordered:hover {
+    background-color: #bdc3c7;
+    color: #ffffff;
+}
+
+.btn-default:hover:not(.no-hover),.flat-default:hover:not(.no-hover), .flat-default.btn-bordered {
+    background-color: #cbd1d5;
+    color: #ffffff;
+}
+
+.btn-default:active:not(.no-hover),.flat-default:active:not(.no-hover), .flat-default.btn-bordered {
+    background-color: #a5abaf;
+    color: #ffffff;
+}
+
+
+.btn-primary,.flat-primary, .flat-primary.btn-bordered:hover {
+    background-color: rgb(26, 188, 156);
+    color: #ffffff;
+}
+
+.btn-primary:hover:not(.no-hover),.flat-primary:hover:not(.no-hover), .flat-primary.btn-bordered {
+    background-color: rgb(27, 206, 173);
+    color: #ffffff;
+}
+
+.btn-primary:active:not(.no-hover),.flat-primary:active:not(.no-hover), .flat-primary.btn-bordered {
+    background-color: rgb(26, 164, 132);
+    color: #ffffff;
+}
+
+
+.btn-success,.flat-success, .flat-success.btn-bordered:hover {
+    background-color: rgb(46, 204, 113);
+    color: #ffffff;
+}
+
+.btn-success:hover:not(.no-hover),.flat-success:hover:not(.no-hover), .flat-success.btn-bordered {
+    background-color: rgb(51, 221, 120);
+    color: #ffffff;
+}
+
+.btn-success:active:not(.no-hover),.flat-success:active:not(.no-hover), .flat-success.btn-bordered {
+    background-color: rgb(40, 174, 95);
+    color: #ffffff;
+}
+
+
+.btn-info,.flat-info, .flat-info.btn-bordered:hover {
+    background-color: rgb(52, 152, 219);
+    color: #ffffff;
+}
+
+.btn-info:hover:not(.no-hover),.flat-info:hover:not(.no-hover), .flat-info.btn-bordered {
+    background-color: rgb(53, 173, 245);
+    border-color: rgb(53, 173, 245);
+    color: #ffffff;
+}
+
+.btn-info:active:not(.no-hover),.flat-info:active:not(.no-hover), .flat-info.btn-bordered {
+    background-color: rgb(51, 134, 199);
+    border-color: rgb(51, 134, 199);
+    color: #ffffff;
+}
+
+.btn-warning, .flat-warning, .flat-warning.btn-bordered:hover {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+.btn-warning:hover:not(.no-hover), .flat-warning:hover:not(.no-hover), .flat-warning.btn-bordered {
+    background-color: #f18822;
+    color: #ffffff;
+}
+
+.btn-warning:hover:not(.no-hover), .flat-warning:hover:not(.no-hover), .flat-warning.btn-bordered {
+    background-color: #d26a22;
+    color: #ffffff;
+}
+
+.btn-danger,.flat-danger, .flat-danger.btn-bordered:hover {
+    background-color: rgb(231, 76, 60);
+    color: #ffffff;
+}
+
+.btn-danger:hover:not(.no-hover), .flat-danger:hover:not(.no-hover), .flat-danger.btn-bordered {
+    background-color: rgb(255, 80, 62);
+    color: #ffffff;
+}
+
+.btn-danger:active:not(.no-hover),.flat-danger:active:not(.no-hover), .flat-danger.btn-bordered {
+    background-color: rgb(213, 74, 58);
+    color: #ffffff;
+}
+
+.btn-inverse,.flat-inverse, .flat-inverse.btn-bordered:hover {
+    background-color: rgb(52, 73, 94);
+    color: #ffffff !important;
+}
+
+.btn-inverse:hover:not(.no-hover),.flat-inverse:hover:not(.no-hover), .flat-inverse.btn-bordered {
+    background-color: rgb(67, 95, 117);
+    color: #ffffff !important;
+}
+
+
+.btn-inverse:active,.flat-inverse:active, .flat-inverse.btn-bordered:hover {
+    background-color: rgb(23, 34, 46);
+    color: #ffffff !important;
+}
+
+.flat-color, .flat-color.btn-bordered:hover {
+    background-color: #2ecc71;
+    color: #ffffff;
+}
+
+.flat-color:hover:not(.no-hover), .flat-color.btn-bordered {
+    background-color: #2ecc71;
+    color: #ffffff;
+}
+
+
+.btn.no-hover:not(.flat-default) {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.btn.no-hover:hover:not(.flat-default) {
+    color: rgba(255, 255, 255, 1) !important;
+}

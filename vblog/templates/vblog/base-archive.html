@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- INCLUDE ALL STYLES -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/custom.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/eden.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/animate.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/lightbox.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}">
+	<!-- EOC -->
+	
+	<!-- TELL BROWSER, THIS SITE IS MOBILE READY -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- EOC -->
+
+	<title>Videos Archive | Proffesional Weekend!</title>
+</head>
+<header>
+
+	<!-- SECTION HEADER -->
+	<div class="header-bg-single">
+		<div class="header-text-single animated fadeInUp">
+			<h1>Proffesional Weekend Archives!</h1>
+		</div>
+	</div>
+	<!-- EOC -->
+
+</header>
+<body>
+    {% block content %}
+	{% endblock %}
+</body>
+<footer>
+
+	<!-- SECTION FOOTER -->
+	<div class="homepage-footer-jogja">
+		<div class="homepage-footer-copyright">
+			<p id="homepage-footer-jogja-createdat"><strong>Made with <i class="fa fa-heart fa-tiny"></i> from Yogyakarta</strong></p>
+		</div>
+	</div>
+	<!-- EOC -->
+
+	<!-- INCLUDE ALLJAVASCRIPT -->
+	<script src="{% static "js/jquery-1.11.3.min.js" %}"></script>
+	<script src="{% static "js/bootstrap.min.js" %}"></script>
+	<script src="{% static "js/lightbox.min.js" %}"></script>
+	<!-- EOC -->
+
+	<!-- JS TABS -->
+	<script type="text/javascript">
+		$('#myTabs a').click(function (e) {
+  			e.preventDefault()
+  		$(this).tab('show')
+	})
+	</script>
+	<!-- EOC -->
+
+</footer>
+</html>

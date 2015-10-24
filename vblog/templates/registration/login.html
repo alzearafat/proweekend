@@ -1,0 +1,59 @@
+{% extends "registration/base.html" %}
+{% block title %}Log in | Proffesional Weekend!{% endblock %}
+{% block content %}
+
+<div class="login-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-4">
+				<div class="account-box animated fadeInUp">
+
+					{% if form.errors %}
+					<div class="alert alert-danger" role="alert">Perbaiki error dibawah ini :</div>
+					{% endif %}
+
+					<div class="logo ">
+						<h4>LOGIN</h4>
+					</div>
+					<form class="form-signin" method="post" action="?next={{ next|default:"/videos" }}">{% csrf_token %}
+						<div class="form-group">
+							{% if form.username.errors %} 
+								<div class="has-error">{{ form.username.errors|join:", " }}</div>
+							{% endif %}
+							<input id="id_username" name="username" type="text" class="form-control" placeholder="username" required autofocus /></input>
+						</div>
+						<div class="form-group">
+							{% if form.password.errors %} 
+								<div class="has-error">{{ form.password.errors|join:", " }}</div>
+							{% endif %}
+							<input id="id_password" name="password" type="password" class="form-control" placeholder="Password" required /></input>
+						</div>
+						<input type="submit" value="Masuk" class="btn btn-lg btn-block orange-bg"></input>
+					</form>
+					<a class="forgotLnk" href="http://www.jquery2dotnet.com">Tidak bisa mengakses account!</a>
+					<div class="or-box">
+						<span class="or">OR</span>
+						<div class="row">
+							<div class="col-md-6 row-block">
+								<a href="http://www.jquery2dotnet.com" class="btn btn-facebook btn-block"><i class="fa fa-facebook fa-lg"></i> FB</a>
+							</div>
+							<div class="col-md-6 row-block">
+								<a href="http://www.jquery2dotnet.com" class="btn btn-ig btn-block"><i class="fa fa-instagram fa-lg"></i> IG</a>
+							</div>
+						</div>
+					</div>
+					<div class="or-box row-block">
+						<div class="row">
+							<div class="col-md-12 row-block">
+								{% block content-related %}
+									<a href="/accounts/register/" class="btn btn-primary btn-block">Bikin Account Baru</a>
+								{% endblock %}
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+</div>

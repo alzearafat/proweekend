@@ -1,0 +1,55 @@
+{% extends "vblog/base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+	<!-- SECTION DISCLAIMER -->
+	<div class="body-wrapper-disclaimer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<div class="body-wrapper-disclaimer-img">
+						<img src="{% static "img/sirphone.png" %}" />
+						<img src="{% static "img/sirphone.png" %}" class="flip-it" />
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="body-disclaimer">
+						<h4>DISCLAIMER</h4>
+						<p>
+							Heh, tolong dibaca yee gaes. Ini website kite bikin bukan untuk jadi saingan nya vimeo, apalagi youtube ye! Ini website kite bikin cuma untuk wadah dokumentasi kegiatan kite-kite anak PEWE, buat have fun, and cuma untuk mengisi waktu senggang aje. Kagak usah banyak bacot, apalagi ngejek yee... Nikmatin aje. Take it, or leave it. Kalo ente ngerasa bisa bikin yang lebih bagus yah monggo bikin sendiri ae. Simple ;-)
+						</p>
+						<p><strong>Be respectful and be gentlement...</strong> <a href="">More about us.</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- EOC -->
+
+	<!-- SECTION VIDEOS -->
+	<div class="body-wrapper-videos">
+		<div class="container">
+			<div class="row">
+				<div class="strike">
+					<span><h4>LATEST VIDEOS</h4></span>
+				</div>
+				{% for video in videos %}
+				<div class="col-md-3 col-sm-12">
+					<div class="thumbnail content-thumbnail">
+						<img alt="" src="/vblog/media/{{ video.featured_image }}">
+						<div class="caption">
+							<h4>{{ video.title }}</h4>
+							<a class="btn btn-dark-side btn-block" href="{% url "video_detail" pk=video.pk %}"><i class="fa fa-play-circle-o fa-lg"></i> Watch</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="more-videos-button">
+			<a class="btn orange-bg-rounded btn-lg" href="/videos" target="_blank"><i class="fa fa-plus-circle fa-lg"></i> MORE VIDEOS</a>
+		</div>
+	</div>
+	<!-- EOC -->
+
+{% endblock %}

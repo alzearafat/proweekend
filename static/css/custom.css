@@ -1,0 +1,442 @@
+/*GLOBAL*/
+
+.fa-lg {
+	padding-right: 7px;
+}
+
+.fa-heart {
+    color: #e74c3c;
+    font-size: 0.8em !important;
+}
+
+.fb-button {
+    background: #3C5A99;
+    color: #FFFFFF;
+}
+
+.fb-button:hover {
+    background: #2980b9;
+    color: #FFFFFF;
+}
+
+.btn-dark-side {
+	background-color: #8e44ad;
+	color: #FFFFFF
+}
+
+.btn-dark-side:hover {
+	background-color: #9b59b6;
+	color: #FFFFFF;
+}
+
+.btn-danger-rounded {
+	border-radius: 50px !important;
+	background-color: #E74C3C;
+	border-color: #E74C3C;
+	color: #FFF;
+}
+
+.btn-danger-rounded:hover {
+	border-radius: 50px !important;
+	background-color: #c0392b;
+	border-color: #c0392b;
+	color: #FFF;
+}
+
+/* ---------- EOC --------- */
+
+
+/*HEADER*/
+.header-bg {
+	background: url(../img/pattern-black.png) repeat-x scroll right top;
+	height: 50vh;
+}
+
+.header-bg-single {
+    background: url(../img/pattern-white.png) repeat-x scroll right top;
+    height: 50vh;
+}
+
+.header-text {
+	text-align: center;
+	color: #FFFFFF;
+/*	padding-top: 50px;
+	padding-bottom: 50px;*/
+}
+
+.header-text h1 {
+	font-size: 4em;
+}
+
+.header-text h2 {
+	font-size: 2em;
+}
+
+.header-text-single {
+    text-align: center;
+    color: #34495e;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.header-text-single h1 {
+    font-size: 3em;
+    margin-top: 0px;
+}
+
+.navbar-default {
+	background-color: transparent !important;
+}
+
+.navbar-default-custom .navbar-nav > li > a {
+    color: #34495e;
+}
+
+/* ---------- EOC --------- */
+
+
+/*BODY*/
+
+.body-wrapper-disclaimer {
+	padding: 50px 0px 50px 0px;
+}
+
+.body-wrapper-disclaimer a {
+	color: #681C9F;
+}
+
+.body-wrapper-disclaimer-img {
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+}
+
+.body-wrapper-disclaimer p {
+	font-size: 1.2em;
+	line-height: 30px;
+}
+
+.body-wrapper-videos {
+	padding: 0px 0px 50px 0px;
+	text-align: center;
+}
+
+.body-wrapper-videos p {
+	font-size: 1.2em;
+	line-height: 30px;
+}
+
+.body-disclaimer {
+	text-align: left !important;
+}
+
+.flip-it {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+    filter: FlipH;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #2C3E50;
+    padding: 50px 50px 50px 50px;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: #2C3E50;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.strike h3 {
+	margin-top: 10px ;
+	margin-bottom: 10px;
+}
+
+.more-videos-button {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+/* ---------- EOC --------- */
+
+
+
+/*SINGLE VIDEO*/
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.video-tabs {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.gallery-single {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-single img {
+    width: 100%;
+    height: auto;
+}
+
+.deskripsi p {
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+.info-lain {
+    text-align: center;
+}
+
+.info-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.gallery img {
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* ---------- EOC --------- */
+
+
+/*VIDEO LIST*/
+
+.social-sharer {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ---------- EOC --------- */
+
+
+/*FOOTER*/
+
+.homepage-footer-jogja {
+    background: #FFFFFF url("../img/jogja-bg.png");
+    height: 200px;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    background-position: center bottom !important;
+}
+
+.homepage-footer-jogja i {
+    color: #e74c3c;
+    font-size: 0.8em;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.homepage-footer-copyright {
+    padding-top: 100px;
+}
+
+.homepage-footer-jogja p {
+    text-align: center;
+    font-weight: bold;
+    color: #95a5a6;
+    padding-top: 15px;
+}
+
+p#homepage-footer-jogja-createdat {
+	padding-top: 70px;
+}
+/* ---------- EOC --------- */
+
+
+/*LOGIN - REGISTER*/
+
+.login-content {
+    background: #f39c12 url('../img/bg_teaser.svg') no-repeat scroll 50% 50%;
+    height: 100vh;
+    text-align: center;
+}
+
+.register-content {
+    background: #8e44ad url('../img/bg_teaser.svg') no-repeat scroll 50% 50%;
+    height: 100vh;
+    text-align: center;
+}
+
+.login-box-wrapper {
+    margin-top: 200px;
+}
+
+.account-box
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -o-border-radius: 5x;
+    z-index: 3;
+    font-size: 13px !important;
+    font-family: "Helvetica Neue" ,Helvetica,Arial,sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo
+{
+    width: 138px;
+    height: 30px;
+    text-align: center;
+    margin: 10px 0px 27px 40px;
+    background-position: 0px -4px;
+    position: relative;
+}
+
+.forgotLnk
+{
+    margin-top: 10px;
+    display: block;
+}
+
+.purple-bg
+{
+    background-color: #6E329D;
+    color: #FFFFFF;
+}
+
+.purple-bg:hover
+{
+    background-color: #9b59b6;
+    color: #FFFFFF;
+}
+
+.orange-bg {
+    background-color: #f39c12;
+    color: #FFFFFF;
+}
+
+.orange-bg:hover {
+    background-color: #f1c40f;
+    color: #FFFFFF;
+}
+
+.orange-bg-rounded {
+    background-color: #f39c12;
+    color: #FFFFFF;
+    border-radius: 50px !important;
+}
+
+.orange-bg-rounded:hover {
+    background-color: #f1c40f;
+    color: #FFFFFF;
+}
+
+
+.or-box
+{
+    position: relative;
+    border-top: 1px solid #dfdfdf;
+    padding-top: 20px;
+    margin-top:20px;
+}
+.or
+{
+    color: #666666;
+    background-color: #ffffff;
+    position: absolute;
+    text-align: center;
+    top: -8px;
+    width: 40px;
+    left: 90px;
+}
+.account-box .btn:hover
+{
+    color: #fff;
+}
+.btn-facebook
+{
+    background-color: #3F639E;
+    color: #fff;
+    font-weight:bold;
+}
+.btn-ig
+{
+    background-color: #34495e;
+    color: #fff;
+    font-weight:bold;
+}
+/* ---------- EOC --------- */
+
+
+/*MEDIA QUERY*/
+
+/*@media (min-width: 1200px) {
+    .container{
+        max-width: 1000px;
+    }
+}*/
+
+@media only screen and (max-width : 320px) {
+    .info-item {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .info-item {
+        text-align: left;
+    }
+}
+
+/*@media only screen and (max-width : 768px) {
+    .info-item {
+        text-align: left;
+    }
+}*/
+
+/* ---------- EOC --------- */
