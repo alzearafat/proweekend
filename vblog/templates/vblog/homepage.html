@@ -36,7 +36,7 @@
 				{% for video in videos %}
 				<div class="col-md-3 col-sm-12">
 					<div class="thumbnail content-thumbnail">
-						<img alt="" src="/vblog/media/{{ video.featured_image }}">
+						<img alt="{{ video.title }}" src="/vblog/media/{{ video.featured_image }}">
 						<div class="caption">
 							<h4>{{ video.title }}</h4>
 							<a class="btn btn-dark-side btn-block" href="{% url "video_detail" pk=video.pk %}"><i class="fa fa-play-circle-o fa-lg"></i> Watch</a>
@@ -47,7 +47,7 @@
 			</div>
 		</div>
 		<div class="more-videos-button">
-			<a class="btn orange-bg-rounded btn-lg" href="/videos" target="_blank"><i class="fa fa-plus-circle fa-lg"></i> MORE VIDEOS</a>
+			<a class="btn orange-bg-rounded btn-lg" href="/videos"><i class="fa fa-plus-circle fa-lg"></i> MORE VIDEOS</a>
 		</div>
 	</div>
 	<!-- EOC -->

@@ -1,0 +1,83 @@
+{% extends "the_don/base.html" %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<div class="about-tabs">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#the_dons" aria-controls="the_dons" role="tab" data-toggle="tab">The Dons</a></li>
+					<li role="presentation"><a href="#about-this-web" aria-controls="about-this-web" role="tab" data-toggle="tab">About this Web</a></li>
+					<li role="presentation"><a href="#base-camp" aria-controls="base-camp" role="tab" data-toggle="tab">Base Camp</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="the_dons">
+						<div class="container">
+							<div class="row">
+								{% for team in teams %}
+									<div class="col-md-3 col-sm-12">
+										<div class="card hovercard">
+											<div class="cardheader">
+											 	<img src="/vblog/media/{{ team.card_image_header }}" />
+											</div>
+											<div class="card-content">
+												<div class="avatar">
+													<a href="{% url "team_detail" pk=team.pk %}"><img alt="{{ team.name }}" src="/vblog/media/{{ team.profile_pic }}"></a>
+												</div>
+												<div class="info">
+													<div class="title">
+														<a href="{% url "team_detail" pk=team.pk %}">{{ team.name }}</a>
+													</div>
+													<div class="desc">
+														{{ team.quote }}
+													</div>
+												</div>
+												<div class="bottom">
+													<a class="btn-social btn-twitter btn-sm" href="{{ team.twitter }}">
+														<i class="fa fa-twitter"></i>
+													</a>
+													<a class="btn-social btn-google-plus btn-sm" rel="publisher" href="{{ team.googleplus }}">
+														<i class="fa fa-google-plus"></i>
+													</a>
+													<a class="btn-social btn-facebook btn-sm" rel="publisher" href="{{ team.facebook }}">
+														<i class="fa fa-facebook"></i>
+													</a>
+													<a class="btn-social btn-instagram btn-sm" rel="publisher" href="{{ team.instagram }}">
+														<i class="fa fa-instagram"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="about-this-web">
+						about this web
+					</div>
+					<div role="tabpanel" class="tab-pane" id="base-camp">
+						<div class="google-maps">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.2851236966703!2d110.40738611408457!3d-7.759555679101185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599bc6e9bca5%3A0x9e8dcd4a8c70dd65!2sKedai+Nesya!5e0!3m2!1sid!2sid!4v1445708469105" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="home-button">
+					<a class="btn btn-lg orange-bg-rounded" href="/" role="button"><i class="fa fa-home fa-lg"></i> Back to Homepage</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

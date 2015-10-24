@@ -19,6 +19,16 @@
     color: #FFFFFF;
 }
 
+.ig-button {
+    background: #34495e;
+    color: #FFFFFF;
+}
+
+.ig-button:hover {
+    background: #2c3e50;
+    color: #FFFFFF;
+}
+
 .btn-dark-side {
 	background-color: #8e44ad;
 	color: #FFFFFF
@@ -61,7 +71,7 @@
 	text-align: center;
 	color: #FFFFFF;
 /*	padding-top: 50px;
-	padding-bottom: 50px;*/
+padding-bottom: 50px;*/
 }
 
 .header-text h1 {
@@ -191,6 +201,70 @@
 /* ---------- EOC --------- */
 
 
+/*ABOUT PAGE*/
+
+.about-tabs {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card.hovercard .cardheader img {
+    /*background-color: #f39c12 !important;*/
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.card-content {
+    position: relative;
+    background-color: #F6F8F9;
+    z-index: 2;
+}
+
+.about-box {
+    border: 1px solid #bdc3c7;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.about-box .about-image {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.about-box .about-image img {
+    width: 200px;
+    height: 200px;
+}
+
+.header-text-single h1 {
+    text-transform: uppercase;
+}
+
+.about-text {
+    padding: 20px 20px 20px 20px;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* ---------- EOC --------- */
 
 /*SINGLE VIDEO*/
 
@@ -244,6 +318,12 @@
     border-radius: 3px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.home-button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 /* ---------- EOC --------- */
@@ -419,24 +499,24 @@ p#homepage-footer-jogja-createdat {
     .container{
         max-width: 1000px;
     }
-}*/
+    }*/
 
-@media only screen and (max-width : 320px) {
-    .info-item {
-        text-align: left;
+    @media only screen and (max-width : 320px) {
+        .info-item {
+            text-align: left;
+        }
     }
-}
 
-@media only screen and (max-width : 480px) {
-    .info-item {
-        text-align: left;
+    @media only screen and (max-width : 480px) {
+        .info-item {
+            text-align: left;
+        }
     }
-}
 
 /*@media only screen and (max-width : 768px) {
     .info-item {
         text-align: left;
     }
-}*/
+    }*/
 
 /* ---------- EOC --------- */

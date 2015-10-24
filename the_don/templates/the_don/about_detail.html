@@ -1,0 +1,41 @@
+{% extends "the_don/base-detail.html" %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<div class="about-box">	
+				<div class="about-image">
+					<p><img alt="{{ team.name }}" src="/vblog/media/{{ team.profile_pic }}" class="img-circle"></p>
+				</div>
+				<div class="about-text">
+					<h5>~ About {{ team.name }}</h5>
+					{{ team.about | safe }}
+				</div>
+				<div class="social-sharer">
+					<p>
+						<h5>- TETAP TERHUBUNG -</h5>
+						<div class="btn-group" role="group" aria-label="...">
+							<a href="{{ team.facebook }}" type="button" class="btn fb-button"><i class="fa fa-facebook fa-lg"></i> Facebook</a>
+							<a href="{{ team.twitter }}" type="button" class="btn btn-info"><i class="fa fa-twitter fa-lg"></i> Twitter</a>
+							<a href="{{ team.googleplus }}" type="button" class="btn btn-danger"><i class="fa fa-google fa-lg"></i> Googleplus</a>
+							<a href="{{ team.instagram }}" type="button" class="btn ig-button"><i class="fa fa-instagram fa-lg"></i> Instagram</a>
+						</div>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<div class="home-button">
+				<a class="btn btn-lg orange-bg-rounded" href="/" role="button"><i class="fa fa-home fa-lg"></i> Back to Homepage</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
