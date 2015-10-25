@@ -23,6 +23,7 @@
 				    <li role="presentation" class="active"><a href="#deskripsi" aria-controls="deskripsi" role="tab" data-toggle="tab">Deskripsi</a></li>
 				    <li role="presentation"><a href="#info-lain" aria-controls="info-lain" role="tab" data-toggle="tab">Info Lain</a></li>
 				    <li role="presentation"><a href="#gallery" aria-controls="gallery" role="tab" data-toggle="tab">Gallery</a></li>
+				    <li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">Map</a></li>
 				  </ul>
 
 				  <!-- Tab panes -->
@@ -84,6 +85,15 @@
 				    		</div>
 				    	</div>
 				  	</div>
+				    <div role="tabpanel" class="tab-pane" id="map">
+				    	<div class="row">
+				    		<div class="col-md-12 col-sm-12">
+				    			<div class="google-maps">
+				    				{{ video.gmap_iframe | safe}}
+				    			</div>
+				    		</div>
+				    	</div>
+				    </div>
 				</div>
 			</div>
 		</div>

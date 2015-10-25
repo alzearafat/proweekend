@@ -9,4 +9,4 @@ def about(request):
 
 def team_detail(request, pk):
 	team = get_object_or_404(Team, pk=pk)
-	return render(request, 'the_don/about_detail.html', {'team': team})
+	return render(request, 'the_don/about-detail.html', {'team': team})
