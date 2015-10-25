@@ -9,7 +9,7 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="body-wrapper-disclaimer-img">
 						<img src="{% static "img/sirphone.png" %}" />
-						<img src="{% static "img/sirphone.png" %}" class="flip-it" />
+						<img src="{% static "img/sirphone.png" %}" class="flip-it hidden-sm hidden-xs" />
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12">
@@ -30,9 +30,13 @@
 	<div class="body-wrapper-videos">
 		<div class="container">
 			<div class="row">
-				<div class="strike">
-					<span><h4>LATEST VIDEOS</h4></span>
+				<div class="col-md-12 col-sm-12">
+					<div class="strike">
+						<span><h4>LATEST VIDEOS</h4></span>
+					</div>
 				</div>
+			</div>
+			<div class="row">
 				{% for video in videos %}
 				<div class="col-md-3 col-sm-12">
 					<div class="thumbnail content-thumbnail">

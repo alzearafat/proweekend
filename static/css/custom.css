@@ -102,6 +102,11 @@ padding-bottom: 50px;*/
     color: #34495e;
 }
 
+.social-sharer-mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 /* ---------- EOC --------- */
 
 
@@ -136,7 +141,7 @@ padding-bottom: 50px;*/
 }
 
 .body-disclaimer {
-	text-align: left !important;
+	text-align: justify;
 }
 
 .flip-it {
@@ -505,12 +510,100 @@ p#homepage-footer-jogja-createdat {
         .info-item {
             text-align: left;
         }
+
+        .header-text h1 {
+            font-size: 1.5em;
+            margin-top: 0px !important;
+        }
+                
+        .header-text h2 {
+            font-size: 1em;
+            padding: 0px 25px 0px 25px;
+        }
+
+        .body-wrapper-disclaimer {
+            padding-bottom: 30px;
+        }
+
+        .body-disclaimer {
+            padding-top: 20px;
+        }
+
+        .body-disclaimer h4 {
+            text-align: center;
+        }
+
+        .header-text-single h1 {
+            font-size: 2em;
+        }
+
+        .homepage-footer-jogja {
+            height: 30px;
+        }
+
+        .homepage-footer-copyright {
+            padding-top: 0px;
+        }
+
+        p#homepage-footer-jogja-createdat {
+            padding-top: 0px;
+        }
+
+        .about-text {
+            padding-left: 10px;
+            padding-right: 10px;
+        }        
+
     }
 
     @media only screen and (max-width : 480px) {
         .info-item {
             text-align: left;
         }
+        
+        .header-text h1 {
+            font-size: 1.5em;
+            margin-top: 0px !important;
+        }
+
+        .header-text h2 {
+            font-size: 1em;
+            padding: 0px 25px 0px 25px;
+        }
+
+        .body-wrapper-disclaimer {
+            padding-bottom: 30px;
+        }
+
+        .body-disclaimer {
+            padding-top: 20px;
+        }
+
+        .body-disclaimer h4 {
+            text-align: center;
+        }
+
+        .header-text-single h1 {
+            font-size: 2em;
+        }
+
+        .homepage-footer-jogja {
+            height: 30px;
+        }
+
+        .homepage-footer-copyright {
+            padding-top: 0px;
+        }
+
+        p#homepage-footer-jogja-createdat {
+            padding-top: 0px;
+        }
+
+        .about-text {
+            padding-left: 10px;
+            padding-right: 10px;
+        }        
+
     }
 
 /*@media only screen and (max-width : 768px) {
