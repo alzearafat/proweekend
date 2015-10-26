@@ -1,8 +1,13 @@
 {% extends "registration/base.html" %}
-
 {% block title %}Logged out{% endblock %}
 
-{% block content %}
-<h1>You've been logged out.</h1>
-<p>Thanks for stopping by; when you come back, don't forget to <a href="/accounts/login/">log in</a> again.</p>
-{% endblock %}
+<div class="container">
+  	<div class="row">
+    	<div class="col-md-12 col-sm-12">
+			{% block content %}
+				<h1>You've been logged out.</h1>
+				<p>Thanks for stopping by; when you come back, don't forget to <a href="/accounts/login/">log in</a> again.</p>
+			{% endblock %}
+		</div>
+	</div>
+</div>

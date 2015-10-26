@@ -1,8 +1,14 @@
 {% extends "registration/base.html" %}
-
 {% block title %}Activation complete{% endblock %}
 
-{% block content %}
-<h1>Congratulations!</h1>
-<p>Your registration is now complete. Go to the site and start having fun!</p>
-{% endblock %}
+
+<div class="container">
+  	<div class="row">
+    	<div class="col-md-12 col-sm-12">
+			{% block content %}
+				<h1>Congratulations!</h1>
+				<p>Your registration is now complete. <a href="/">Go to the site</a> and start having fun!</p>
+			{% endblock %}
+		</div>
+	</div>
+</div>
