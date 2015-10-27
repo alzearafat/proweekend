@@ -5,16 +5,25 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 col-sm-12">
-			<div class="about-box">	
+			<div class="about-box">
+
+				<!-- ABOUT PROFILE PIC -->
 				<div class="about-image">
 					<p><img alt="{{ team.name }}" src="/vblog/media/{{ team.profile_pic }}" class="img-circle"></p>
 				</div>
+				<!-- EOC -->
+
+				<!-- ABOUT TEXT -->
 				<div class="about-text">
 					<h5>~ About {{ team.name }}</h5>
 					{{ team.about | safe }}
 				</div>
+				<!-- EOC -->
+
 				<div class="row">
 					<div class="col-md-12 col-sm-12">
+
+						<!-- ABOUT SOCIAL BUTTON -->
 						<div class="social-sharer">
 							<p>
 								<h5>- FOLLOW ME -</h5>
@@ -40,6 +49,8 @@
 								</div>
 							</div>
 						</div>
+						<!-- EOC -->
+						
 					</div>
 				</div>
 			</div>

@@ -9,7 +9,7 @@ class Video(models.Model):
 	location = models.CharField(max_length=255, help_text='Lokasi tempat jalan-jalan nya (Opsional)', blank=True)
 	HTM = models.CharField(max_length=100, help_text='Harga Tiket Masuk, tempat jalan-jalan nya (Opsional)', blank=True)
 	content = RichTextField(config_name='default')
-	gmap_iframe = models.TextField(help_text='Copy paste embed code Google Maps nya disini (Opsional)', blank=True)
+	gmap_iframe = models.TextField(help_text='Copy paste embed code Google Maps nya disini (Opsionalndo', blank=True)
 	gallery_image_1 = models.ImageField(upload_to='images/%Y/%m/%d', help_text='Dimensi gambar maksimal 750x750p, dan minimal 350x350p! (Opsional)', blank=True)
 	gallery_image_2 = models.ImageField(upload_to='images/%Y/%m/%d', help_text='Dimensi gambar maksimal 750x750p, dan minimal 350x350p! (Opsional)', blank=True)
 	gallery_image_3 = models.ImageField(upload_to='images/%Y/%m/%d', help_text='Dimensi gambar maksimal 750x750p, dan minimal 350x350p! (Opsional)', blank=True)
