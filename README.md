@@ -16,8 +16,9 @@ Professional Weekend is a web application with a video blog (vblog) and portal's
 
 SCREENSHOT
 ---------------
-
-![alt text](http://i68.tinypic.com/2hdazoh.jpg "Splash image")
+<div align="center">
+	<img src="http://i68.tinypic.com/2hdazoh.jpg" align="center" style="border-radius: 3px;" />
+</div>
 
 TECHNOLOGY STACK
 ---------------
