@@ -1,4 +1,4 @@
-<img src="docs/logo.png" align="left" width="192px" height="192px"/>
+<img src="http://i65.tinypic.com/30d87xi.jpg" align="left" width="200px" height="200px"/>
 <img align="left" width="0" height="192px" hspace="10"/>
 
 > The <a href="http://pewe.us">Proffesional Weekend</a> Official Code Base
@@ -33,33 +33,24 @@ INSTALL
 I assume you already setup your django development enviroment (pip, virtualenv, git, etc...). If not yet, then Google is your friend.
 
 1. Create virtual enviroment :
-
 ```
 virtualenv .
 source bin/activate
 ```
-
 2. Git clone the project inside created enviroment :
-
 ```
 git clone https://github.com/alzearafat/pewe-web.git
 ```
-
 3. Install all requirements :
-
 ```
 pip install -r requirements.txt
 ```
-
 4. Create migration
-
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
-
 5. Run the local dev server
-
 ```
 python manage.py runserver
 ```
@@ -185,7 +176,7 @@ SOURCE CODE TREE
     ├── tests.py
     ├── urls.py
     └── views.py
-    ```
+```
 
 LICENSE
 ---------------
