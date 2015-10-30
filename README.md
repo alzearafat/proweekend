@@ -1,4 +1,4 @@
-<img src="http://i65.tinypic.com/30d87xi.jpg" align="left" width="230px" height="230px"/>
+<img src="http://i65.tinypic.com/30d87xi.jpg" align="left" width="220px" height="220px"/>
 <img align="left" width="0" height="192px" hspace="10"/>
 
 > The <a href="http://pewedemo.zealab.com/">Proffesional Weekend</a> Official Code Base
