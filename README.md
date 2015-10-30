@@ -5,7 +5,7 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square)](/LICENSE.md) [![Pewe Version](https://img.shields.io/pypi/pyversions/Django.svg)](http://pewedemo.zealab.com/) [![Pewe Build Status](https://img.shields.io/badge/pewe--v1.0-90%25-orange.svg)](https://travis-ci.org/oh-my-fish/oh-my-fish) [![App Status](https://img.shields.io/pypi/status/Django.svg)](http://pewedemo.zealab.com/)
 
-Professional Weekend is a web application with a video blog (vblog) and portal's format, also with user authentication.
+Professional Weekend is a Python/Django web application with a video blog (vblog) and portal format, also with user authentication. I made this web app for fun only on my spare time, so don't expect too much ;)
 
 <br><br>
 
