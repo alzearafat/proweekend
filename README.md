@@ -5,12 +5,7 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square)](/LICENSE.md) [![Pewe Version](https://img.shields.io/pypi/pyversions/Django.svg)](http://pewe.us) [![Pewe Build Status](https://img.shields.io/badge/pewe--v1.0-90%25-orange.svg)](https://travis-ci.org/oh-my-fish/oh-my-fish) [![App Status](https://img.shields.io/pypi/status/Django.svg)](https://pewe.us)
 
-Professional Weekend is a web application with a video blog (vblog) and portal's format, also with user authentication. This web app is build using : 
-
-- Python 2.7.8
-- MySQL 5.0.11
-- Django 1.8.5
-- Bootstrap 3.5.5
+Professional Weekend is a web application with a video blog (vblog) and portal's format, also with user authentication.
 
 <br><br>
 
@@ -23,8 +18,14 @@ SCREENSHOT
 ---------------
 
 ![alt text](http://i68.tinypic.com/2hdazoh.jpg "Splash image")
-![alt text](http://i66.tinypic.com/2jv1bb.jpg "Login Page")
-![alt text](http://i68.tinypic.com/2d7h8w0.jpg "Splash image")
+
+TECHNOLOGY STACK
+---------------
+
+- Python 2.7.8
+- MySQL 5.0.11
+- Django 1.8.5
+- Bootstrap 3.5.5
 
 INSTALL
 ---------------
