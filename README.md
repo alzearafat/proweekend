@@ -37,19 +37,23 @@ I assume you already setup your django development enviroment (pip, virtualenv, 
 virtualenv .
 source bin/activate
 ```
+
 2. Git clone the project inside created enviroment :
 ```
 git clone https://github.com/alzearafat/pewe-web.git
 ```
+
 3. Install all requirements :
 ```
 pip install -r requirements.txt
 ```
+
 4. Create migration
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
+
 5. Run the local dev server
 ```
 python manage.py runserver
