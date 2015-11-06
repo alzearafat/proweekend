@@ -1,5 +1,9 @@
 /*GLOBAL*/
 
+a {
+    text-decoration: none !important;
+}
+
 .fa-lg {
 	padding-right: 7px;
 }
@@ -51,6 +55,27 @@
 	background-color: #c0392b;
 	border-color: #c0392b;
 	color: #FFF;
+}
+
+.btn-custom {
+    font-family: "Montserrat",sans-serif;
+    transition: all 0.2s ease 0s;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 8.3px 16px;
+    border-radius: 3px;
+    border: 2px solid #FFFFFF !important;
+}
+
+.btn-custom:hover {
+    background-color: #FFFFFF !important;
+    color: #2BA3D4 !important;
+}
+
+.btn-default, .flat-default, .flat-default.btn-bordered:hover {
+    background-color: transparent !important;
+    color: #FFFFFF;
 }
 
 .spinner {
@@ -199,12 +224,27 @@ padding-bottom: 50px;*/
     margin-top: 0px;
 }
 
-.navbar-default {
-	background-color: transparent !important;
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0px;
 }
 
-.navbar-default-custom .navbar-nav > li > a {
-    color: #34495e;
+.navbar-custom {
+	background-color: transparent !important;
+    border-color: transparent;
+}
+
+.navbar-header > a {
+    color: #FFFFFF;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+
+.navbar-custom .navbar-nav > li > a:hover {
+    background-color: #f39c12;
+    color: #FFFFFF;
 }
 
 .social-sharer-mobile {
@@ -259,9 +299,21 @@ padding-bottom: 50px;*/
     filter: FlipH;
 }
 
-.thumbnail img {
+.thumbnail {
     width: 100%;
     height: auto;
+}
+
+.thumbnail.content-thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.caption-wrapper {
+    background-color: #F6F8F9;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
 .strike {
@@ -361,7 +413,7 @@ padding-bottom: 50px;*/
 
 .google-maps {
     position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
+    padding-bottom: 75%;
     height: 0;
     overflow: hidden;
     border-radius: 3px;
@@ -488,6 +540,212 @@ p#homepage-footer-jogja-createdat {
 /* ---------- EOC --------- */
 
 
+/*JOURNEY*/
+
+.journey-add-wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.journey-form {
+    width: 80%;
+}
+
+.journey-content {
+    width: 100% !important;
+    height: auto;
+}
+
+.cke_id_content {
+    width: auto !important;
+}
+
+.header-bg-journey {
+    background: #2BA3D4 url('../img/bg_teaser.svg') no-repeat scroll 50% 50%;
+    height: 60vh;
+    text-align: center;
+}
+
+.header-text-journey-archive {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.header-text-journey-archive h1 {
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 0px !important;
+    vertical-align: middle;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.body-wrapper-journey {
+    padding: 0px 0px 50px 0px;
+    text-align: center;
+}
+
+.body-wrapper-videos p {
+    font-size: 1em;
+    line-height: 30px;
+}
+
+#author {
+    text-transform: capitalize;
+}
+
+/* ---------- EOC --------- */
+
+
+/*JOURNEY DETAIL*/
+
+.journey-detail-image {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.journey-detail-image img {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.journey-box {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.journey-detail-text {
+    padding: 20px 20px 20px 20px;
+}
+
+.journey-detail-text h5 {
+    padding: 0px 30px 0px 30px;
+}
+
+.journey-detail-text p {
+    padding: 0px 30px 0px 30px;
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+.heading-meta-wrapper-journey-detail {
+    text-align: center;
+}
+
+#heading-title-journey-detail {
+    text-transform: uppercase;
+}
+
+.grid-story {
+    margin-bottom: 30px !important;
+}
+
+.story-caption h3, .story-caption h4 {
+    font-size: 1.2em;
+}
+
+.story-new-wrap {
+    background-position: center center;
+    background-size: cover;
+    height: 340px;
+    position: relative;
+}
+
+.grad-overlay {
+    background: transparent linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%) repeat scroll 0% 0%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.story-caption {
+    bottom: 0px;
+    color: #FFF;
+    padding: 15px 20px;
+    position: absolute;
+    text-align: left;
+}
+
+.story-caption h3, .story-caption h4 {
+    padding: 0px;
+    font-weight: lighter;
+}
+
+.story-caption h4 {
+    color: #A4A6A7;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.story-new-wrap .traveller-link {
+    color: #A4A6A7;
+    position: relative;
+    z-index: 1001;
+}
+
+.story-new-wrap a.thumbnail {
+    font-size: 0px;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    text-indent: 200%;
+    top: 0px;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 1000;
+}
+
+.thumbnail {
+    background: #333 none repeat scroll 0px 0px;
+    border: medium none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.story-new-wrap .editors-pick {
+    padding: 4px 8px;
+}
+.story-new-wrap span {
+    background-color: #EC2833;
+    color: #FFF;
+    float: right;
+    font-family: Montserrat;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 4px 10px;
+}
+
+/* Float */
+.hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+/* ---------- EOC --------- */
+
+
 /*LOGIN - REGISTER*/
 
 .login-content {
@@ -506,8 +764,7 @@ p#homepage-footer-jogja-createdat {
     margin-top: 200px;
 }
 
-.account-box
-{
+.account-box {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -522,8 +779,7 @@ p#homepage-footer-jogja-createdat {
     margin-top: 50px;
 }
 
-.logo
-{
+.logo {
     width: 138px;
     height: 30px;
     text-align: center;
@@ -532,20 +788,17 @@ p#homepage-footer-jogja-createdat {
     position: relative;
 }
 
-.forgotLnk
-{
+.forgotLnk {
     margin-top: 10px;
     display: block;
 }
 
-.purple-bg
-{
+.purple-bg {
     background-color: #6E329D;
     color: #FFFFFF;
 }
 
-.purple-bg:hover
-{
+.purple-bg:hover {
     background-color: #9b59b6;
     color: #FFFFFF;
 }
@@ -571,16 +824,14 @@ p#homepage-footer-jogja-createdat {
     color: #FFFFFF;
 }
 
-
-.or-box
-{
+.or-box {
     position: relative;
     border-top: 1px solid #dfdfdf;
     padding-top: 20px;
     margin-top:20px;
 }
-.or
-{
+
+.or {
     color: #666666;
     background-color: #ffffff;
     position: absolute;
@@ -589,137 +840,210 @@ p#homepage-footer-jogja-createdat {
     width: 40px;
     left: 90px;
 }
-.account-box .btn:hover
-{
+
+.account-box .btn:hover {
     color: #fff;
 }
-.btn-facebook
-{
+
+.btn-facebook {
     background-color: #3F639E;
     color: #fff;
     font-weight:bold;
 }
-.btn-ig
-{
+
+.btn-ig {
     background-color: #34495e;
     color: #fff;
     font-weight:bold;
 }
+
+.auth-align {
+    text-align: center;
+}
+
+/* ---------- EOC --------- */
+
+
+/*REGISTRATION COMPLETE*/
+
+.reg-complete-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: #30A5D5;
+    text-align: center;
+}
+
+.reg-complete-box {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.reg-complete-box h1 {
+    margin-top: 50px;
+}
+
+.reg-complete-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.reg-complete-box p {
+    font-size: 1.2em;
+}
+
 /* ---------- EOC --------- */
 
 
 /*MEDIA QUERY*/
 
-/*@media (min-width: 1200px) {
-    .container{
-        max-width: 1000px;
-    }
-}*/
-
-    @media only screen and (max-width : 320px) {
-        .info-item {
-            text-align: left;
-        }
-
-        .header-text h1 {
-            font-size: 1.5em;
-            margin-top: 0px !important;
-        }
-                
-        .header-text h2 {
-            font-size: 1em;
-            padding: 0px 25px 0px 25px;
-        }
-
-        .body-wrapper-disclaimer {
-            padding-bottom: 30px;
-        }
-
-        .body-disclaimer {
-            padding-top: 20px;
-        }
-
-        .body-disclaimer h4 {
-            text-align: center;
-        }
-
-        .header-text-single h1 {
-            font-size: 2em;
-        }
-
-        .homepage-footer-jogja {
-            height: 30px;
-        }
-
-        .homepage-footer-copyright {
-            padding-top: 0px;
-        }
-
-        p#homepage-footer-jogja-createdat {
-            padding-top: 0px;
-        }
-
-        .about-text {
-            padding-left: 10px;
-            padding-right: 10px;
-        }        
-
-    }
-
-    @media only screen and (max-width : 480px) {
-        .info-item {
-            text-align: left;
-        }
-        
-        .header-text h1 {
-            font-size: 1.5em;
-            margin-top: 0px !important;
-        }
-
-        .header-text h2 {
-            font-size: 1em;
-            padding: 0px 25px 0px 25px;
-        }
-
-        .body-wrapper-disclaimer {
-            padding-bottom: 30px;
-        }
-
-        .body-disclaimer {
-            padding-top: 20px;
-        }
-
-        .body-disclaimer h4 {
-            text-align: center;
-        }
-
-        .header-text-single h1 {
-            font-size: 2em;
-        }
-
-        .homepage-footer-jogja {
-            height: 30px;
-        }
-
-        .homepage-footer-copyright {
-            padding-top: 0px;
-        }
-
-        p#homepage-footer-jogja-createdat {
-            padding-top: 0px;
-        }
-
-        .about-text {
-            padding-left: 10px;
-            padding-right: 10px;
-        }        
-
-    }
-
-/*@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 320px) {
     .info-item {
         text-align: left;
     }
-}*/
+
+    .header-text h1 {
+        font-size: 1.5em;
+        margin-top: 0px !important;
+    }
+
+    .header-text h2 {
+        font-size: 1em;
+        padding: 0px 25px 0px 25px;
+    }
+
+    .body-wrapper-disclaimer {
+        padding-bottom: 30px;
+    }
+
+    .body-disclaimer {
+        padding-top: 20px;
+    }
+
+    .body-disclaimer h4 {
+        text-align: center;
+    }
+
+    .header-text-single h1 {
+        font-size: 2em;
+    }
+
+    .homepage-footer-jogja {
+        height: 30px;
+    }
+
+    .homepage-footer-copyright {
+        padding-top: 0px;
+    }
+
+    p#homepage-footer-jogja-createdat {
+        padding-top: 0px;
+    }
+
+    .about-text {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .journey-detail-text h5 {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .journey-detail-text p {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .header-text-journey-archive h1 {
+        font-size: 2em;
+    }
+
+    .header-bg-journey {
+        height: 30vh;
+    }
+
+    .header-text-journey-archive {
+        padding-top: 50px;
+    }
+
+    .header-bg-journey {
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .info-item {
+        text-align: left;
+    }
+
+    .header-text h1 {
+        font-size: 1.5em;
+        margin-top: 0px !important;
+    }
+
+    .header-text h2 {
+        font-size: 1em;
+        padding: 0px 25px 0px 25px;
+    }
+
+    .body-wrapper-disclaimer {
+        padding-bottom: 30px;
+    }
+
+    .body-disclaimer {
+        padding-top: 20px;
+    }
+
+    .body-disclaimer h4 {
+        text-align: center;
+    }
+
+    .header-text-single h1 {
+        font-size: 2em;
+    }
+
+    .homepage-footer-jogja {
+        height: 30px;
+    }
+
+    .homepage-footer-copyright {
+        padding-top: 0px;
+    }
+
+    p#homepage-footer-jogja-createdat {
+        padding-top: 0px;
+    }
+
+    .about-text {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .journey-detail-text h5 {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .journey-detail-text p {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .header-text-journey-archive h1 {
+        font-size: 2em;
+    }
+
+    .header-bg-journey {
+        height: 30vh;
+    }
+
+    .header-text-journey-archive {
+        padding-top: 50px;
+    }
+
+    .header-bg-journey {
+        height: 40vh;
+    }
+
+}
+
 
 /* ---------- EOC --------- */

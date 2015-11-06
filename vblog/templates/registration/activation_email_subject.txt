@@ -1,1 +1,1 @@
-Activate your djangoproject.com account - you have {{ expiration_days }} days!
+Aktifkan account PEWE kamu - Kamu punya {{ expiration_days }} expiration days!

@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
 	url(r'', include('vblog.urls')),
     url(r'^about/', include('the_don.urls')),
+    url(r'^journey/', include('journey.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

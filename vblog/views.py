@@ -12,8 +12,8 @@ def homepage(request):
 def video_list(request):
 	videos = Video.objects.order_by('-pubdate')[:12]
 	context = {'videos': videos}
-	return render(request, 'vblog/video-list.html', context)
+	return render(request, 'vblog/video_list.html', context)
 
 def video_detail(request, pk):
 	video = get_object_or_404(Video, pk=pk)
-	return render(request, 'vblog/video-detail.html', {'video': video})
+	return render(request, 'vblog/video_detail.html', {'video': video})

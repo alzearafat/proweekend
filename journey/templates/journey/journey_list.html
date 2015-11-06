@@ -1,0 +1,68 @@
+{% extends "journey/base.html" %}
+{% block title %}Journey Archive | Proffesional Weekend!{% endblock %}
+{% block content %}
+
+<!-- SECTION VIDEOS -->
+<div class="body-wrapper-journey">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="strike">
+					<span><h4>JOURNEY ARCHIVES</h4></span>
+				</div>
+			</div>
+		</div>
+
+		<!-- VIDEO ARCHIVE LIST -->
+		<div class="row">
+			{% for post in posts %}
+			<div class="col-md-4 col-sm-12 grid-story hvr-float">
+				<div class="story-new-wrap" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.featured_image }});" href="{% url "journey_detail" pk=post.pk %}">
+					<div class="grad-overlay">
+						<div class="story-caption">
+							<h3 class="caption-title" href="{% url "journey_detail" pk=post.pk %}">{{ post.title }}</h3>
+							<h4>by : <a class="traveller-link" href="http://journesia.com/traveler/restianasyif">{{ post.author }}</a></h4>
+						</div><!-- story-caption -->
+					</div><!-- grad-overlay -->
+					<a class="thumbnail" href="{% url "journey_detail" pk=post.pk %}">View More</a>
+					<span class="editors-pick"><i class="fa fa-star"></i></span>    
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<!-- EOC -->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+
+					<!-- PAGINATION -->
+					<nav>
+						<ul class="pagination">
+							<li>
+								<a href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+								</a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li>
+								<a href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- EOC -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- EOC -->
+	
+{% endblock %}

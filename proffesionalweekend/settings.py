@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     # MAIN APPS
     'vblog',
     'the_don',
+    'journey',
 
     # 3RD-PARTY APPS
     'registration',
@@ -87,9 +88,20 @@ CKEDITOR_CONFIGS = {
         #     'codesnippet',
         # ]),
            'height': 400,
-           'width': 650,
+           'width': 600,
     }
 }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# EMAIL SERVER SETTING
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mail.yahoo.com'
+EMAIL_HOST_USER = 'peweofficial@yahoo.com'
+EMAIL_HOST_PASSWORD = 'Nallaismystar!!!'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'peweofficial@yahoo.com'
 
 TEMPLATES = [
     {
@@ -112,7 +124,6 @@ WSGI_APPLICATION = 'proffesionalweekend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -120,6 +131,16 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'peweDB',
+#         'USER': 'zea',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

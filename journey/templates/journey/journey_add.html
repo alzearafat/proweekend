@@ -1,0 +1,95 @@
+{% extends "journey/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{{ form.media }}
+
+<div class="journey-add-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-12">
+				<div class="nav-sidebar-journey">
+					<div class="panel panel-default">
+					  	<div class="panel-heading">
+					    	<h3 class="panel-title">Menu</h3>
+					  	</div>
+					  	<div class="panel-body">
+					    	<ul class="nav nav-pills nav-stacked">
+							  <li role="presentation" class="active"><a href="#">Add Journey</a></li>
+							  <li role="presentation"><a href="#">Profile</a></li>
+							  <li role="presentation"><a href="/">Back to Homepage</a></li>
+							</ul>
+					  	</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-12">
+				<form method="POST" enctype="multipart/form-data" class="journey-form">{% csrf_token %}
+				  	<div class="form-group">
+				  		<div class="panel panel-default">
+					  		<div class="panel-heading">Upload Featured Image</div>
+					  		<div class="panel-body">
+					    		<label for="featuredImage">Featured Image</label>
+				    			<input type="file" id="id_featured_image" name="featured_image"></input>
+				    			<p class="help-block">Upload featured image here, MAX 1MB</p>
+					  		</div>
+						</div>
+				  	</div>
+				  	<div class="form-group">
+				    	<label for="title">Author</label>
+				    	{% if user.is_authenticated %}
+				    	<fieldset disabled>
+				    		<input type="text" id="id_author" class="form-control input-lg" name="author" value="{{ user.get_username }}"></input>
+						</fieldset>
+				    	{% endif %}
+				  	</div>
+				  	<div class="form-group">
+				    	<label for="title">Title</label>
+				    	<input type="text" class="form-control input-lg" id="id_title" placeholder="title" maxlength="200" name="title"></input>
+				  	</div>
+				  	<div class="form-group">
+				    	<label for="title">Location</label>
+				    	<input type="text" class="form-control input-lg" id="id_location" placeholder="location" maxlength="200" name="location"></input>
+				  	</div>
+				  	<div class="form-group">
+				  		<div class="journey-content">
+				    		<p><strong>Content</strong></p>
+				    		{{ form.content }}
+				    	</div>
+				  	</div>
+				  	<div class="panel panel-default panel-journey">
+					  	<div class="panel-heading">
+					    	<div class="panel-heading">Journey Gallery</div>
+					  	</div>
+					  	<div class="panel-body">
+					    	<div class="row">
+						  		<div class="col-md-6 col-sm-6">
+								  	<div class="form-group">
+								    	<label for="title">Gallery Image 1</label>
+								    	<input type="file" id="id_gallery_image_1" name="gallery_image_1"></input>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="title">Gallery Image 3</label>
+								    	<input type="file" id="id_gallery_image_2" name="gallery_image_2"></input>
+								  	</div>
+								</div>
+						  		<div class="col-md-6 col-sm-6">
+								  	<div class="form-group">
+								    	<label for="title">Gallery Image 2</label>
+								    	<input type="file" id="id_gallery_image_3" name="gallery_image_3"></input>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="title">Gallery Image 4</label>
+								    	<input type="file" id="id_gallery_image_4" name="gallery_image_4"></input>
+								  	</div>
+								</div>
+							</div>
+					  	</div>
+					</div>
+				  	<button type="submit" class="btn btn-info btn-lg"><i class="fa fa-paper-plane fa-lg"></i> Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

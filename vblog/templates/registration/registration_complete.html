@@ -1,14 +1,18 @@
 {% extends "registration/base.html" %}
-
+{% load staticfiles %}
 {% block title %}Registration complete{% endblock %}
-
 {% block content %}
 
-<div class="container">
-  	<div class="row">
-    	<div class="col-md-12 col-sm-12">
-			<h1>Check your email</h1>
-			<p>An activation link has been sent to the email address you supplied, along with instructions for activating your account.</p>
+<div class="reg-complete-wrapper">
+	<div class="container">
+	  	<div class="row">
+	    	<div class="col-md-12 col-sm-12">
+	    		<div class="reg-complete-box">
+	    			<img src="{% static "img/email.svg" %}" />
+					<h1>Periksa Email Kamu</h1>
+					<p>Kita baru aja ngirim <b>Activation Link</b> ke email yang kamu daftarkan, kalau gak ada coba cek Spam juga ya ^^</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

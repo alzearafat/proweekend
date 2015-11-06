@@ -1,0 +1,98 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- INCLUDE ALL STYLES -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/custom.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/eden.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}">
+	<!-- EOC -->
+	
+	<!-- TELL BROWSER, THIS SITE IS MOBILE READY -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- EOC -->
+
+	<title>Journey Blog | Proffesional Weekend!</title>
+</head>
+<header>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">PEWE</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Home <span class="sr-only">(current)</span></a></li>
+					<li><a href="/videos">Video Blog</a></li>
+					<li class="active"><a href="#">Journey</a></li>
+					<li><a href="/about">About</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<form class="navbar-form navbar-left" role="search">{% if user.is_authenticated %}
+							<a href="{{ request.META.HTTP_NAME }}/accounts/logout/" class="btn orange-bg"><i class="fa fa-user fa-lg"></i></i>Welcome, {{ user.get_username }} - Logout</a>
+							{% else %}
+							<a href="{{ request.META.HTTP_NAME }}/accounts/login/" class="btn orange-bg"><i class="fa fa-unlock fa-lg"></i></i>Login</a>
+							<a href="{{ request.META.HTTP_NAME }}/accounts/register/" class="btn btn-dark-side"><i class="fa fa-user-secret fa-lg"></i>Join the Dark Side</a>
+							{% endif %}	
+							<a href="{{ request.META.HTTP_NAME }}/journey/new/" class="btn btn-info"><i class="fa fa-pencil fa-lg"></i>Write Journey</a>
+						</form>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- SECTION HEADER -->
+	<div class="header-bg-journey">
+		<div class="header-text-journey-wrapper">
+			<div class="header-text-journey-archive">
+				<h1 id="journey-h1">Share Your Journey!</h1>
+			</div>
+			{% if user.is_authenticated %}
+			<a class="btn-custom btn-default btn-lg" href="{{ request.META.HTTP_NAME }}/journey/new/" role="button">WRITE NEW JOURNEY</a>
+			{% else %}
+			<a class="btn-custom btn-default btn-lg" href="{{ request.META.HTTP_NAME }}/accounts/register/" role="button">JOIN JOURNEY MAKER</a>
+			{% endif %}
+		</div>
+	</div>
+	<!-- EOC -->
+
+</header>
+
+<!-- BASE BODY CONTENT -->
+<body>
+	{% block content %}
+	{% endblock %}
+</body>
+<!-- EOC -->
+
+<footer>
+
+	<!-- SECTION FOOTER -->
+	<div class="homepage-footer-jogja">
+		<div class="homepage-footer-copyright">
+			<p id="homepage-footer-jogja-createdat"><strong>Made with <i class="fa fa-heart fa-tiny"></i> from Yogyakarta</strong></p>
+		</div>
+	</div>
+	<!-- EOC -->
+
+	<!-- INCLUDE ALLJAVASCRIPT -->
+	<script type="text/javascript" src="{% static "js/jquery-1.11.3.min.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+	<!-- EOC -->
+
+</footer>
+</html>

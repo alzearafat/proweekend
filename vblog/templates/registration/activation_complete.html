@@ -1,14 +1,22 @@
 {% extends "registration/base.html" %}
+{% load staticfiles %}
 {% block title %}Activation complete{% endblock %}
+{% block content %}
 
-
-<div class="container">
-  	<div class="row">
-    	<div class="col-md-12 col-sm-12">
-			{% block content %}
-				<h1>Congratulations!</h1>
-				<p>Your registration is now complete. <a href="/">Go to the site</a> and start having fun!</p>
-			{% endblock %}
+<div class="auth-align">
+	<div class="reg-complete-wrapper">
+		<div class="container">
+		  	<div class="row">
+		    	<div class="col-md-12 col-sm-12">
+		    		<div class="reg-complete-box">
+		    			<img src="{% static "img/email.svg" %}" />
+						<h1>Selamat! Account Kamu Sudah Aktif!</h1>
+						<p>Terimakasih sudah mendaftar di komunitas PEWE. Kamu bisa <strong><a href="{{ request.META.HTTP_NAME }}/accounts/login/">Login</a></strong>, dan menulis Journey mu sendiri ^^</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
+{% endblock %}
