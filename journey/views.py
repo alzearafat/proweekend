@@ -13,6 +13,13 @@ def journey_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	return render(request, 'journey/journey_detail.html', {'post': post})
 
+def journey_maker(request):
+    if request.user.is_authenticated():
+        posts = request.user.user_posts.filter()
+        return render(request, 'journey/journey_maker.html', {'posts': posts})
+    else:
+        return redirect('/journey')
+
 @login_required
 def journey_new(request):
     if request.method == "POST":

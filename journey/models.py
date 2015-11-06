@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 import datetime
 
 class Post(models.Model):
-	author = models.ForeignKey(User, null=True, blank=True)
+	author = models.ForeignKey(User, related_name="user_posts", null=True, blank=True)
 	title = models.CharField(max_length=200)
 	featured_image = models.ImageField(upload_to='images/%Y/%m/%d', help_text='Ini gambar cover card profile nya. Kecil aja gambar nya.', blank=True)
 	location = models.CharField(max_length=200)

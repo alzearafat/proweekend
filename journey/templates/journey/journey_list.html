@@ -16,7 +16,7 @@
 		<!-- VIDEO ARCHIVE LIST -->
 		<div class="row">
 			{% for post in posts %}
-			<div class="col-md-4 col-sm-12 grid-story hvr-float">
+			<div class="col-md-4 col-sm-12 grid-story">
 				<div class="story-new-wrap" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.featured_image }});" href="{% url "journey_detail" pk=post.pk %}">
 					<div class="grad-overlay">
 						<div class="story-caption">
