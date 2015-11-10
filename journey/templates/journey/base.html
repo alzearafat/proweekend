@@ -34,15 +34,16 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Home <span class="sr-only">(current)</span></a></li>
+					<li><a href="/">Home <span class="sr-only">(current)</span></a></li>
 					<li><a href="/videos">Video Blog</a></li>
-					<li class="active"><a href="#">Journey</a></li>
+					<li class="active"><a href="/journey">Journey</a></li>
 					<li><a href="/about">About</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<form class="navbar-form navbar-left" role="search">{% if user.is_authenticated %}
-							<a href="{{ request.META.HTTP_NAME }}/accounts/logout/" class="btn orange-bg"><i class="fa fa-user fa-lg"></i></i>Welcome, {{ user.get_username }} - Logout</a>
+							<a href="{{ request.META.HTTP_NAME }}/journey/maker/" class="btn btn-dark-side"><i class="fa fa-user-secret fa-lg"></i></i>Welcome, {{ user.get_username }} - My Journey</a>
+							<a href="{{ request.META.HTTP_NAME }}/accounts/logout/" class="btn orange-bg"><i class="fa fa-user fa-lg"></i></i>Logout</a>
 							{% else %}
 							<a href="{{ request.META.HTTP_NAME }}/accounts/login/" class="btn orange-bg"><i class="fa fa-unlock fa-lg"></i></i>Login</a>
 							<a href="{{ request.META.HTTP_NAME }}/accounts/register/" class="btn btn-dark-side"><i class="fa fa-user-secret fa-lg"></i>Join the Dark Side</a>

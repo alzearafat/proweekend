@@ -1,6 +1,6 @@
 {% extends "journey/base.html" %}
-{% load crispy_forms_tags %}
 {% block content %}
+{% load crispy_forms_tags %}
 {{ form.media }}
 
 <div class="journey-add-wrapper">
@@ -14,7 +14,7 @@
 					  	</div>
 					  	<div class="panel-body">
 					    	<ul class="nav nav-pills nav-stacked">
-							    <li role="presentation" class="active"><a href="{{ request.META.HTTP_NAME }}/journey/new/">Add Journey</a></li>
+							    <li role="presentation" class="active"><a href="{{ request.META.HTTP_NAME }}/journey/new/">Edit Journey</a></li>
 							    <li role="presentation"><a href="{{ request.META.HTTP_NAME }}/journey/maker/">My Journeys</a></li>
 							</ul>
 					  	</div>
@@ -30,8 +30,7 @@
 				  		<div class="panel panel-default">
 					  		<div class="panel-heading">Upload Featured Image</div>
 					  		<div class="panel-body">
-					    		<label for="featuredImage">Featured Image</label>
-				    			<input type="file" id="id_featured_image" name="featured_image"></input>
+					    		{{ form.featured_image|as_crispy_field }}
 				    			<p class="help-block">Upload featured image here, MAX 1MB</p>
 					  		</div>
 						</div>
@@ -45,17 +44,14 @@
 				    	{% endif %}
 				  	</div>
 				  	<div class="form-group">
-				    	<label for="title">Title</label>
-				    	<input type="text" class="form-control input-lg" id="id_title" placeholder="title" maxlength="200" name="title"></input>
+				    	{{ form.title|as_crispy_field }}
 				  	</div>
 				  	<div class="form-group">
-				    	<label for="title">Location</label>
-				    	<input type="text" class="form-control input-lg" id="id_location" placeholder="location" maxlength="200" name="location"></input>
+				    	{{ form.location|as_crispy_field }}
 				  	</div>
 				  	<div class="form-group">
 				  		<div class="journey-content">
-				    		<p><strong>Content</strong></p>
-				    		{{ form.content }}
+				    		{{ form.content|as_crispy_field }}
 				    	</div>
 				  	</div>
 				  	<div class="panel panel-default panel-journey">
@@ -66,22 +62,18 @@
 					    	<div class="row">
 						  		<div class="col-md-6 col-sm-6">
 								  	<div class="form-group">
-								    	<label for="title">Gallery Image 1</label>
-								    	<input type="file" id="id_gallery_image_1" name="gallery_image_1"></input>
+								    	{{ form.gallery_image_1|as_crispy_field }}
 								  	</div>
 								  	<div class="form-group">
-								    	<label for="title">Gallery Image 3</label>
-								    	<input type="file" id="id_gallery_image_2" name="gallery_image_2"></input>
+								  		{{ form.gallery_image_2|as_crispy_field }}
 								  	</div>
 								</div>
 						  		<div class="col-md-6 col-sm-6">
 								  	<div class="form-group">
-								    	<label for="title">Gallery Image 2</label>
-								    	<input type="file" id="id_gallery_image_3" name="gallery_image_3"></input>
+								  		{{ form.gallery_image_3|as_crispy_field }}
 								  	</div>
 								  	<div class="form-group">
-								    	<label for="title">Gallery Image 4</label>
-								    	<input type="file" id="id_gallery_image_4" name="gallery_image_4"></input>
+								  		{{ form.gallery_image_4|as_crispy_field }}
 								  	</div>
 								</div>
 							</div>

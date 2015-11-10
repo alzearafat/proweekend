@@ -49,8 +49,10 @@
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
 									<li>
-										<form class="navbar-form navbar-left" role="search">{% if user.is_authenticated %}
-    										<a href="accounts/logout/" class="btn orange-bg"><i class="fa fa-user fa-lg"></i></i>Welcome, {{ user.get_username }} - Logout</a>
+										<form class="navbar-form navbar-left" role="search">
+											{% if user.is_authenticated %}
+											<a href="{{ request.META.HTTP_NAME }}/journey/maker/" class="btn btn-dark-side"><i class="fa fa-user-secret fa-lg"></i></i>Welcome, {{ user.get_username }} - My Profile</a>
+											<a href="{{ request.META.HTTP_NAME }}/accounts/logout/" class="btn orange-bg"><i class="fa fa-user fa-lg"></i></i>Logout</a>
 											{% else %}
 											<a href="accounts/login/" class="btn orange-bg"><i class="fa fa-unlock fa-lg"></i></i>Login</a>
 											<a href="accounts/register/" class="btn btn-dark-side"><i class="fa fa-user-secret fa-lg"></i>Join the Dark Side</a>
@@ -76,7 +78,7 @@
 
 <!-- BASE BODY CONTENT -->
 <body>
-    {% block content %}
+	{% block content %}
 	{% endblock %}
 </body>
 <!-- EOC -->
@@ -93,18 +95,18 @@
 
 	<!-- INCLUDE ALLJAVASCRIPT -->
 	<script src="{% static "js/please-wait.min.js" %}"></script>
-    <script type="text/javascript">
+	<script type="text/javascript">
 		var loading_screen = pleaseWait({
-		  	logo: "{% static "img/sirphone-orange.png" %}",
-		  	backgroundColor: '#F39C12',
-		  	loadingHtml: "<p class='loading-message'>Sabar dab, loading sik!</p><div class='spinner'><div class='rect1'></div><div class='rect2'></div><div class='rect3'></div><div class='rect4'></div><div class='rect5'></div></div>"
+			logo: "{% static "img/sirphone-orange.png" %}",
+			backgroundColor: '#F39C12',
+			loadingHtml: "<p class='loading-message'>Sabar dab, loading sik!</p><div class='spinner'><div class='rect1'></div><div class='rect2'></div><div class='rect3'></div><div class='rect4'></div><div class='rect5'></div></div>"
 		});
 		window.onload=function(){
-		    window.setTimeout(function(){
-		        loading_screen.finish();
-		    },3000);
+			window.setTimeout(function(){
+				loading_screen.finish();
+			},3000);
 		}
-    </script>
+	</script>
 	<script src="{% static "js/jquery-1.11.3.min.js" %}"></script>
 	<script src="{% static "js/bootstrap.min.js" %}"></script>
 	<!-- EOC -->

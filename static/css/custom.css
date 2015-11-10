@@ -547,6 +547,12 @@ p#homepage-footer-jogja-createdat {
     margin-bottom: 30px;
 }
 
+.heading-new-journey h4 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
 .journey-form {
     width: 80%;
 }
@@ -561,9 +567,29 @@ p#homepage-footer-jogja-createdat {
 }
 
 .header-bg-journey {
-    background: #2BA3D4 url('../img/bg_teaser.svg') no-repeat scroll 50% 50%;
+    background: #32A6D5 url('../img/bg_teaser.svg') no-repeat scroll 50% 50%;
     height: 60vh;
     text-align: center;
+}
+
+.header-bg-journey-custom {
+    background: url('../img/city-bokeh.jpg') no-repeat scroll 50% 50%;
+    height: 60vh;
+    text-align: center;
+}
+
+.header-bg-journey-overlay {
+    /*background: url('../img/city-bokeh.jpg') no-repeat scroll 50% 50%;*/
+    height: 100vh;
+    text-align: center;
+    background-size: cover;
+}
+
+.overlay-bg {
+    background-color: rgba(0, 0, 0, 0.3);
+    float: left;
+    height: 100%;
+    width: 100%;
 }
 
 .header-text-journey-archive {
@@ -581,6 +607,24 @@ p#homepage-footer-jogja-createdat {
     font-weight: bold;
 }
 
+.header-text-journey-overlay {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 150px;
+}
+
+#journey-h1 {
+    color: #FFF;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0px 0px 20px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
 .body-wrapper-journey {
     padding: 0px 0px 50px 0px;
     text-align: center;
@@ -593,6 +637,19 @@ p#homepage-footer-jogja-createdat {
 
 #author {
     text-transform: capitalize;
+}
+
+.my-journeys {
+    text-align: center;
+    padding: 0px 10px 10px 10px;
+}
+
+.my-journeys h4 {
+    margin-top: 0px;
+}
+
+.nav-sidebar-journey-maker {
+    padding-top: 40px;
 }
 
 /* ---------- EOC --------- */
@@ -610,6 +667,13 @@ p#homepage-footer-jogja-createdat {
     max-width: 100%;
     height: auto;
     text-align: center;
+}
+
+.profile-pic-detail img {
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .journey-box {
@@ -639,6 +703,7 @@ p#homepage-footer-jogja-createdat {
 
 #heading-title-journey-detail {
     text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .grid-story {
@@ -741,6 +806,26 @@ p#homepage-footer-jogja-createdat {
 .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
   -webkit-transform: translateY(-8px);
   transform: translateY(-8px);
+}
+
+/* ---------- EOC --------- */
+
+
+/*JOURNEY MAKER*/
+
+.maker-meta {
+    text-align: center;
+}
+
+.maker-meta img {
+    width: 200px;
+    height: auto;
+}
+
+.social-sharer-maker {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 /* ---------- EOC --------- */
@@ -973,6 +1058,10 @@ p#homepage-footer-jogja-createdat {
     .header-bg-journey {
         height: 40vh;
     }
+
+    .nav-sidebar-journey-maker {
+        padding-top: 10px;
+    }
 }
 
 @media only screen and (max-width : 480px) {
@@ -1045,6 +1134,10 @@ p#homepage-footer-jogja-createdat {
 
     .header-bg-journey {
         height: 40vh;
+    }
+
+    .nav-sidebar-journey-maker {
+        padding-top: 10px;
     }
 
 }

@@ -3,6 +3,7 @@ from django.forms import ModelForm
 from django import forms
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from django.conf import settings
 import datetime
 
 class Post(models.Model):

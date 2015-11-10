@@ -93,6 +93,7 @@ CKEDITOR_CONFIGS = {
 }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_CLASS_CONVERTERS = {'textinput': "form-control input-lg"}
 
 # EMAIL SERVER SETTING
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -121,6 +122,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'proffesionalweekend.wsgi.application'
 
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.RemoteUserBackend',
+        'django.contrib.auth.backends.ModelBackend',
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases

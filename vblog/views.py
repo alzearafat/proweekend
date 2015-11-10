@@ -8,7 +8,6 @@ def homepage(request):
 	context = {'videos': videos}
 	return render(request, 'vblog/homepage.html', context)
 
-@login_required
 def video_list(request):
 	videos = Video.objects.order_by('-pubdate')[:12]
 	context = {'videos': videos}

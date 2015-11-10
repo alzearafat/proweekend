@@ -6,12 +6,6 @@
 		<div class="col-md-12 col-sm-12">
 			<div class="journey-box">
 
-				<!-- ABOUT PROFILE PIC -->
-				<div class="journey-detail-image">
-					<p><img alt="{{ post.title }}" src="/vblog/media/{{ post.featured_image }}" class="img-rounded"></p>
-				</div>
-				<!-- EOC -->
-
 				<div class="row">
 					<div class="col-md-12 col-sm-12">
 
@@ -43,20 +37,16 @@
 							</p>
 						</div>
 						<!-- EOC -->
-						
+												
 					</div>
 				</div>
 
 				<!-- JOURNEY DETAIL TEXT -->
 				<div class="journey-detail-text">
-					<div class="heading-meta-wrapper-journey-detail">
-						<h4 id="heading-title-journey-detail">{{ post.title }}</h4>
-						<p><strong id="author">by <a href="#">{{ post.author }}</a></strong></p>
-					</div>
 					<p>{{ post.content | safe }}</p>
 				</div>
 				<!-- EOC -->
-
+	
 			</div>
 		</div>
 	</div>

@@ -21,7 +21,7 @@
 					<div class="grad-overlay">
 						<div class="story-caption">
 							<h3 class="caption-title" href="{% url "journey_detail" pk=post.pk %}">{{ post.title }}</h3>
-							<h4>by : <a class="traveller-link" href="http://journesia.com/traveler/restianasyif">{{ post.author }}</a></h4>
+							<h4>by : <a class="traveller-link" href="{% url "journey_detail" pk=post.pk %}">{{ post.author }}</a></h4>
 						</div><!-- story-caption -->
 					</div><!-- grad-overlay -->
 					<a class="thumbnail" href="{% url "journey_detail" pk=post.pk %}">View More</a>
@@ -38,22 +38,18 @@
 
 					<!-- PAGINATION -->
 					<nav>
-						<ul class="pagination">
-							<li>
-								<a href="#" aria-label="Previous">
-									<span aria-hidden="true">&laquo;</span>
-								</a>
-							</li>
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li>
-								<a href="#" aria-label="Next">
-									<span aria-hidden="true">&raquo;</span>
-								</a>
-							</li>
+						<ul class="pager">
+						    {% if posts.has_previous %}
+						    	<li class="previous"><a href="?page={{ posts.previous_page_number }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+						    {% endif %}
+
+						    <span class="current">
+						        Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+						    </span>
+
+						    {% if posts.has_next %}
+						    	<li class="next"><a href="?page={{ posts.next_page_number }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+						    {% endif %}
 						</ul>
 					</nav>
 					<!-- EOC -->
