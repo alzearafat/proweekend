@@ -62,7 +62,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-SETTINGS.PY LOCATION
+Settings.py LOCATION
 ---------------
 
 Template: https://github.com/alzearafat/pewe-web/wiki/Settings.py-Template
