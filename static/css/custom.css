@@ -652,6 +652,14 @@ p#homepage-footer-jogja-createdat {
     padding-top: 40px;
 }
 
+.journey-jumbotron {
+    text-align: center;
+}
+
+.journey-jumbotron h4 {
+    padding-bottom: 10px;
+}
+
 /* ---------- EOC --------- */
 
 

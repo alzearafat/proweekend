@@ -9,15 +9,16 @@
 			<div class="col-md-4 col-sm-12">
 				<div class="nav-sidebar-journey-maker">
 					<div class="panel panel-default">
-					  	<div class="panel-heading">
-					    	<h3 class="panel-title">Menu</h3>
-					  	</div>
-					  	<div class="panel-body">
-					    	<ul class="nav nav-pills nav-stacked">
-							    <li role="presentation"><a href="{{ request.META.HTTP_NAME }}/journey/new/">Add Journey</a></li>
-							    <li role="presentation" class="active"><a href="{{ request.META.HTTP_NAME }}/journey/maker/">My Journeys</a></li>
+						<div class="panel-heading">
+							<h3 class="panel-title">Menu</h3>
+						</div>
+						<div class="panel-body">
+							<ul class="nav nav-pills nav-stacked">
+								<li role="presentation"><a href="{{ request.META.HTTP_NAME }}/journey/new/">Add Journey</a></li>
+								<li role="presentation" class="active"><a href="{{ request.META.HTTP_NAME }}/journey/maker/">My Journeys</a></li>
+								<li role="presentation"><a href="{{ request.META.HTTP_NAME }}/journey/">Back to Journey List</a></li>
 							</ul>
-					  	</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -40,10 +41,36 @@
 						</div>
 						<a class="btn btn-info btn-block" style="border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" href="{% url 'journey_edit' pk=post.pk %}"><i class="fa fa-pencil fa-lg"></i> Edit</a>
 					</div>
+					{% empty %}
+					<div class="journey-jumbotron">
+						<div class="jumbotron">
+							<h4>Kamu belum punya Journey :(</h4>
+							<p><a class="btn btn-info btn-lg" href="{{ request.META.HTTP_NAME }}/journey/new/" role="button">Tulis Journey!</a></p>
+						</div>
+					</div>
 					{% endfor %}
 				</div>
 			</div>
 		</div>
+
+		<!-- PAGINATION -->
+		<nav>
+			<ul class="pager">
+				{% if posts.has_previous %}
+				<li class="previous"><a href="?page={{ posts.previous_page_number }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+				{% endif %}
+
+				<span class="current">
+					Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+				</span>
+
+				{% if posts.has_next %}
+				<li class="next"><a href="?page={{ posts.next_page_number }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+				{% endif %}
+			</ul>
+		</nav>
+		<!-- EOC -->
+		
 	</div>
 </div>
 
