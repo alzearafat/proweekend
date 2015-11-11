@@ -1,4 +1,5 @@
 {% extends "journey/base_detail.html" %}
+{% load social_share %}
 {% block content %}
 
 <div class="container">
@@ -15,9 +16,9 @@
 								<h5>- Share the <i class="fa fa-heart"></i> -</h5>
 								<div class="social-sharer-desktop visible-md visible-lg hidden-sm hidden-xs">
 									<div class="btn-group" role="group" aria-label="...">
-										<button type="button" class="btn fb-button"><i class="fa fa-facebook fa-lg"></i> Facebook</button>
-										<button type="button" class="btn btn-info"><i class="fa fa-twitter fa-lg"></i> Twitter</button>
-										<button type="button" class="btn btn-danger"><i class="fa fa-google fa-lg"></i> Google</button>
+										{% post_to_facebook object_or_url "Facebook" %}
+										{% post_to_twitter "New Journey: {{object.title}}. Check it out!" object_or_url "Twitter" %}
+										{% post_to_gplus object_or_url "Google+" %}
 									</div>
 								</div>
 							</p>

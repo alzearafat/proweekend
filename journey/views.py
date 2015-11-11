@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import JourneyForm
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+import datetime
 
 def journey_list(request):
     post_list = Post.objects.all()
@@ -19,9 +20,9 @@ def journey_list(request):
 
     return render(request, 'journey/journey_list.html', {"posts": posts})
 
-def journey_detail(request, pk):
-	post = get_object_or_404(Post, pk=pk)
-	return render(request, 'journey/journey_detail.html', {'post': post})
+def journey_detail(request, slug):
+    post = Post.objects.get(slug=slug)
+    return render(request, 'journey/journey_detail.html', {'post': post})
 
 def journey_maker(request):
     if request.user.is_authenticated():
@@ -43,8 +44,9 @@ def journey_new(request):
     if request.method == "POST":
         form = JourneyForm(request.POST, request.FILES)
         if form.is_valid():
+            post = form.save(commit=False)
             post.author = request.user
-            post = form.save()
+            post.tanggal_publish = datetime.datetime.now()
             post.save()
             return redirect('journey.views.journey_list')
     else:
@@ -52,15 +54,16 @@ def journey_new(request):
     return render(request, 'journey/journey_add.html', {'form': form})
 
 @login_required
-def journey_edit(request, pk):
-    post = get_object_or_404(Post, pk=pk)
+def journey_edit(request, slug):
+    post = Post.objects.get(slug=slug)
     if request.method == "POST":
-        form = JourneyForm(request.POST, instance=post)
+        form = JourneyForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
+            post.tanggal_publish = datetime.datetime.now()
             post.save()
-            return redirect('journey.views.journey_detail', pk=post.pk)
+            return redirect('journey.views.journey_detail', slug=slug)
     elif not request.user == post.author:
         return redirect('/journey')
     else:

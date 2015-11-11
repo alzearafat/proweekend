@@ -9,6 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="{% static "css/eden.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}">
 	<!-- EOC -->
+
+	<!-- INCLUDE KNOCKOUT JS -->
+	<script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.3.0.js"></script>
+	<!-- EOC -->
 	
 	<!-- TELL BROWSER, THIS SITE IS MOBILE READY -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,6 +97,18 @@
 	<!-- INCLUDE ALLJAVASCRIPT -->
 	<script type="text/javascript" src="{% static "js/jquery-1.11.3.min.js" %}"></script>
 	<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+	<!-- EOC -->
+
+	<!-- JQUERY FOR SLUG DASH -->
+	<script type="text/javascript">
+		$('#id_title').bind('keyup keypress blur', function() {  
+			var myStr = $(this).val()
+				myStr=myStr.toLowerCase();
+				myStr=myStr.replace(/[^a-zA-Z0-9\.]+/g,"-");
+
+		    $('#id_slug').val(myStr); 
+		});
+	</script>
 	<!-- EOC -->
 
 </footer>

@@ -13,18 +13,18 @@
 			</div>
 		</div>
 
-		<!-- VIDEO ARCHIVE LIST -->
+		<!-- JOURNEY ARCHIVE LIST -->
 		<div class="row">
 			{% for post in posts %}
 			<div class="col-md-4 col-sm-12 grid-story">
-				<div class="story-new-wrap" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.featured_image }});" href="{% url "journey_detail" pk=post.pk %}">
+				<div class="story-new-wrap" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.featured_image }});" href="{% url "journey_detail" slug=post.slug %}">
 					<div class="grad-overlay">
 						<div class="story-caption">
-							<h3 class="caption-title" href="{% url "journey_detail" pk=post.pk %}">{{ post.title }}</h3>
-							<h4>by : <a class="traveller-link" href="{% url "journey_detail" pk=post.pk %}">{{ post.author }}</a></h4>
+							<h3 class="caption-title" href="{% url "journey_detail" slug=post.slug %}">{{ post.title }}</h3>
+							<h4>by : <a class="traveller-link" href="#">{{ post.author }}</a></h4>
 						</div><!-- story-caption -->
 					</div><!-- grad-overlay -->
-					<a class="thumbnail" href="{% url "journey_detail" pk=post.pk %}">View More</a>
+					<a class="thumbnail" href="{% url "journey_detail" slug=post.slug %}">View More</a>
 					<span class="editors-pick"><i class="fa fa-star"></i></span>    
 				</div>
 			</div>

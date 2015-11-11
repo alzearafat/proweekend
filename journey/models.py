@@ -4,11 +4,13 @@ from django import forms
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 from django.conf import settings
+from django.template.defaultfilters import slugify
 import datetime
 
 class Post(models.Model):
 	author = models.ForeignKey(User, related_name="user_posts", null=True, blank=True)
 	title = models.CharField(max_length=200)
+	slug = models.SlugField(('slug'), max_length=200, blank=True, unique=True)
 	featured_image = models.ImageField(upload_to='images/%Y/%m/%d', help_text='Ini gambar cover card profile nya. Kecil aja gambar nya.', blank=True)
 	location = models.CharField(max_length=200)
 	content = RichTextField(config_name='default')

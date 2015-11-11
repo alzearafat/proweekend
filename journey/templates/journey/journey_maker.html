@@ -29,17 +29,17 @@
 					</div>
 					{% for post in posts %}
 					<div class="col-md-6 col-sm-12 grid-story">
-						<div class="story-new-wrap" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.featured_image }});" href="{% url "journey_detail" pk=post.pk %}">
+						<div class="story-new-wrap" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.featured_image }});" href="{% url "journey_detail" slug=post.slug %}">
 							<div class="grad-overlay">
 								<div class="story-caption">
-									<h3 class="caption-title" href="{% url "journey_detail" pk=post.pk %}">{{ post.title }}</h3>
+									<h3 class="caption-title" href="{% url "journey_detail" slug=post.slug %}">{{ post.title }}</h3>
 									<h4>by : <a class="traveller-link" href="http://journesia.com/traveler/restianasyif">{{ post.author }}</a></h4>
 								</div><!-- story-caption -->
 							</div><!-- grad-overlay -->
-							<a class="thumbnail" href="{% url "journey_detail" pk=post.pk %}">View More</a>
+							<a class="thumbnail" href="{% url "journey_detail" slug=post.slug %}">View More</a>
 							<span class="editors-pick"><i class="fa fa-star"></i></span>    
 						</div>
-						<a class="btn btn-info btn-block" style="border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" href="{% url 'journey_edit' pk=post.pk %}"><i class="fa fa-pencil fa-lg"></i> Edit</a>
+						<a class="btn btn-info btn-block" style="border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;" href="{% url "journey_edit" slug=post.slug %}"><i class="fa fa-pencil fa-lg"></i> Edit</a>
 					</div>
 					{% empty %}
 					<div class="journey-jumbotron">
