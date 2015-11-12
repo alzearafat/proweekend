@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "css/eden.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "css/animate.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/lightbox.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}">
 	<!-- EOC -->
 	
@@ -15,7 +16,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- EOC -->
 
-	<title>Journey Blog | Proffesional Weekend!</title>
+	<title>{{ post.title }} | Proffesional Weekend!</title>
 </head>
 <header>
 
@@ -51,6 +52,7 @@
 	<!-- INCLUDE ALLJAVASCRIPT -->
 	<script src="{% static "js/jquery-1.11.3.min.js" %}"></script>
 	<script src="{% static "js/bootstrap.min.js" %}"></script>
+	<script src="{% static "js/lightbox.min.js" %}"></script>
 	<!-- EOC -->
 
 </footer>

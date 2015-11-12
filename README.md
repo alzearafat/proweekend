@@ -1,7 +1,7 @@
 <img src="http://i65.tinypic.com/30d87xi.jpg" align="left" width="220px" height="220px"/>
 <img align="left" width="0" height="192px" hspace="10"/>
 
-> The <a href="http://pewedemo.zealab.com/">Proffesional Weekend v2.0</a> Official Code Base
+> The <a href="http://pewedemo.zealab.com/">Proffesional Weekend v2.2</a> Official Code Base
 
 [![MIT License](https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square)](/LICENSE.md) [![Pewe Version](https://img.shields.io/pypi/pyversions/Django.svg)](http://pewedemo.zealab.com/) [![Pewe Build Status](https://img.shields.io/badge/pewe--v2.0-90%25-orange.svg)](https://travis-ci.org/oh-my-fish/oh-my-fish) [![App Status](https://img.shields.io/pypi/status/Django.svg)](http://pewedemo.zealab.com/)
 
@@ -73,7 +73,8 @@ TO-DO LIST
 
 1. Add search engine
 2. Add pagination (DONE!)
-3. ...
+3. Add Single Author Profile
+4. ...
 
 LICENSE
 ---------------
@@ -82,6 +83,12 @@ LICENSE
 
 CHANGELOG
 ---------------
+
+**Version 2.2**
+- Change Journey URL From PK to Slug!
+- Add Single Journey Gallery
+- Add Social Sharer
+- Style Improvement
 
 **Version 2.0**
 - Add "Journey" feature!

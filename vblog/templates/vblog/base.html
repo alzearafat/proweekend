@@ -42,22 +42,24 @@
 
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav">
-									<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+									<li><a href="/">Home <span class="sr-only">(current)</span></a></li>
 									<li><a href="/videos">Video Blog</a></li>
-									<li><a href="/journey">Journey</a></li>
+									<li class="active"><a href="/journey">Journey</a></li>
 									<li><a href="/about">About</a></li>
+									{% if user.is_authenticated %}
+									<li><a href="{{ request.META.HTTP_NAME }}/accounts/logout/"><b>Logout</b></a></li>
+									{% else %}
+									<li><a href="{{ request.META.HTTP_NAME }}/accounts/login/"><b>Login</b></a></li>
+									{% endif %}	
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
 									<li>
-										<form class="navbar-form navbar-left" role="search">
-											{% if user.is_authenticated %}
-											<a href="{{ request.META.HTTP_NAME }}/journey/maker/" class="btn btn-dark-side"><i class="fa fa-user-secret fa-lg"></i></i>Welcome, {{ user.get_username }} - My Profile</a>
-											<a href="{{ request.META.HTTP_NAME }}/accounts/logout/" class="btn orange-bg"><i class="fa fa-user fa-lg"></i></i>Logout</a>
+										<form class="navbar-form navbar-left" role="search">{% if user.is_authenticated %}
+											<a href="{{ request.META.HTTP_NAME }}/journey/maker/" class="btn purple-bg-rounded btn-padding"><i class="fa fa-user-secret fa-lg"></i> Welcome, {{ user.get_username }} - My Journey</a>
 											{% else %}
-											<a href="accounts/login/" class="btn orange-bg"><i class="fa fa-unlock fa-lg"></i></i>Login</a>
-											<a href="accounts/register/" class="btn btn-dark-side"><i class="fa fa-user-secret fa-lg"></i>Join the Dark Side</a>
-											{% endif %}	
-											<a href="journey/new/" class="btn btn-info"><i class="fa fa-pencil fa-lg"></i>Write Journey</a>
+											<a href="{{ request.META.HTTP_NAME }}/accounts/register/" class="btn purple-bg-rounded btn-padding"><i class="fa fa-user-secret fa-lg"></i> Join the Dark Side</a>
+											{% endif %}
+											<a href="{{ request.META.HTTP_NAME }}/accounts/register/" class="btn blue-bg-rounded btn-padding"><i class="fa fa-pencil fa-lg"></i> Write Journey</a>
 										</form>
 									</li>
 								</ul>

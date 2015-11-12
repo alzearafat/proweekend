@@ -38,7 +38,7 @@
 							</p>
 						</div>
 						<!-- EOC -->
-												
+
 					</div>
 				</div>
 
@@ -47,7 +47,35 @@
 					<p>{{ post.content | safe }}</p>
 				</div>
 				<!-- EOC -->
-	
+				
+				<!-- JOURNEY GALLERY -->
+				<div align="center"><h5>- Journey Gallery <i class="fa fa-heart"></i> -</h5></div>
+				<div class="journey-gallery-wrapper">
+					<div class="row">
+						<div class="col-md-3 sm-12">
+							<div class="journey-gallery-image">
+								<a href="{{ request.META.HTTP_NAME }}/vblog/media/{{ post.gallery_image_1 }}" data-lightbox="journey"><div class="clip-circle" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.gallery_image_1 }})" alt="Image 1"></div></a>
+							</div>
+						</div>
+						<div class="col-md-3 sm-12">
+							<div class="journey-gallery-image">
+								<a href="{{ request.META.HTTP_NAME }}/vblog/media/{{ post.gallery_image_2 }}" data-lightbox="journey"><div class="clip-circle" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.gallery_image_2 }})" alt="Image 2"></div></a>
+							</div>
+						</div>
+						<div class="col-md-3 sm-12">
+							<div class="journey-gallery-image">
+								<a href="{{ request.META.HTTP_NAME }}/vblog/media/{{ post.gallery_image_3 }}" data-lightbox="journey"><div class="clip-circle" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.gallery_image_3 }})" alt="Image 3"></div></a>
+							</div>
+						</div>
+						<div class="col-md-3 sm-12">
+							<div class="journey-gallery-image">
+								<a href="{{ request.META.HTTP_NAME }}/vblog/media/{{ post.gallery_image_4 }}" data-lightbox="journey"><div class="clip-circle" style="background-image:url({{ request.META.HTTP_NAME }}/vblog/media/{{ post.gallery_image_4 }})" alt="Image 4"></div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- EOC -->
+
 			</div>
 		</div>
 	</div>

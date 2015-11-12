@@ -247,6 +247,19 @@ padding-bottom: 50px;*/
     color: #FFFFFF;
 }
 
+.navbar-custom-2 .navbar-nav > li > a {
+    color: #000000;
+}
+
+.navbar-custom-2 .navbar-nav > li > a:hover {
+    background-color: #39A9D6;
+    color: #FFFFFF;
+}
+
+.navbar-fixed-top {
+    background-color: #FFFFFF;
+}
+
 .social-sharer-mobile {
     padding-left: 10px;
     padding-right: 10px;
@@ -593,8 +606,8 @@ p#homepage-footer-jogja-createdat {
 }
 
 .header-text-journey-archive {
-    padding-top: 70px;
-    padding-bottom: 50px;
+    padding-top: 130px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -692,7 +705,10 @@ p#homepage-footer-jogja-createdat {
 }
 
 .journey-detail-text {
-    padding: 20px 20px 20px 20px;
+    padding-top: 20px;
+    padding-right: 150px; 
+    padding-bottom: 20px; 
+    padding-left: 150px;
 }
 
 .journey-detail-text h5 {
@@ -816,6 +832,21 @@ p#homepage-footer-jogja-createdat {
   transform: translateY(-8px);
 }
 
+.journey-gallery-wrapper {
+    text-align: center;
+    padding: 50px 150px 50px 150px;
+}
+
+.clip-circle {
+    background-size:360px 240px;
+    background-position:-80px 0px;
+    height:200px;
+    width:200px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:auto;
+}
+
 /* ---------- EOC --------- */
 
 
@@ -915,6 +946,33 @@ p#homepage-footer-jogja-createdat {
 .orange-bg-rounded:hover {
     background-color: #f1c40f;
     color: #FFFFFF;
+}
+
+.purple-bg-rounded {
+    background-color: #8e44ad;
+    color: #FFFFFF;
+    border-radius: 50px !important;
+}
+
+.purple-bg-rounded:hover {
+    background-color: #9b59b6;
+    color: #FFFFFF;
+}
+
+.blue-bg-rounded {
+    background-color: #36A8D6;
+    color: #FFFFFF;
+    border-radius: 50px !important;
+}
+
+.blue-bg-rounded:hover {
+    background-color: #3498db;
+    color: #FFFFFF;
+}
+
+.btn-padding {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .or-box {
@@ -1070,6 +1128,23 @@ p#homepage-footer-jogja-createdat {
     .nav-sidebar-journey-maker {
         padding-top: 10px;
     }
+
+    .journey-detail-text {
+        padding-top: 10px;
+        padding-right: 10px; 
+        padding-bottom: 10px; 
+        padding-left: 10px;
+    }
+
+    .journey-gallery-wrapper {
+        text-align: center;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .journey-gallery-image {
+        padding: 10px 0px 10px 0px;
+    }
+
 }
 
 @media only screen and (max-width : 480px) {
@@ -1146,6 +1221,22 @@ p#homepage-footer-jogja-createdat {
 
     .nav-sidebar-journey-maker {
         padding-top: 10px;
+    }
+
+    .journey-detail-text {
+        padding-top: 10px;
+        padding-right: 10px; 
+        padding-bottom: 10px; 
+        padding-left: 10px;
+    }
+
+    .journey-gallery-wrapper {
+        text-align: center;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .journey-gallery-image {
+        padding: 10px 0px 10px 0px;
     }
 
 }
