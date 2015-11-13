@@ -17,12 +17,15 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from registration.backends.default.views import RegistrationView
+from registration.forms import RegistrationFormUniqueEmail
 
 urlpatterns = [
 	url(r'', include('vblog.urls')),
     url(r'^about/', include('the_don.urls')),
     url(r'^journey/', include('journey.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/register/$', RegistrationView.as_view(form_class=RegistrationFormUniqueEmail), name='registration_register'),
     url(r'^accounts/', include('registration.backends.default.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
