@@ -3,7 +3,7 @@
 
 > The <a href="http://pewedemo.zealab.com/">Proffesional Weekend v2.3</a> Official Code Base
 
-[![MIT License](https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square)](/LICENSE.md) [![Pewe Version](https://img.shields.io/pypi/pyversions/Django.svg)](http://pewedemo.zealab.com/) [![Pewe Build Status](https://img.shields.io/badge/pewe--v2.0-90%25-orange.svg)](https://travis-ci.org/oh-my-fish/oh-my-fish) [![App Status](https://img.shields.io/pypi/status/Django.svg)](http://pewedemo.zealab.com/)
+[![MIT License](https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square)](/LICENSE.md) [![Pewe Version](https://img.shields.io/pypi/pyversions/Django.svg)](http://pewedemo.zealab.com/) [![Pewe Build Status](https://img.shields.io/badge/pewe--v2.4-90%25-orange.svg)](https://travis-ci.org/oh-my-fish/oh-my-fish) [![App Status](https://img.shields.io/pypi/status/Django.svg)](http://pewedemo.zealab.com/)
 
 <div align="justify">
 	Professional Weekend is a Python/Django web application with a video blog (vblog), multi-author, multi-blog and portal feature, also with user authentication. I made this web app for fun only on my spare time.
