@@ -1,4 +1,4 @@
-Django==1.8.5
+Django==1.8.6
 django-ckeditor==5.0.2
 django-crispy-forms==1.5.2
 django-disqus==0.5
