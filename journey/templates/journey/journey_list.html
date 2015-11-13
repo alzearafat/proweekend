@@ -12,8 +12,21 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- JOURNEY ARCHIVE LIST -->
+
+		<!-- SEARCH FORM -->
+		<div class="search-form">
+			<form action="{% url 'watson:search' %}" role="form">
+				<div class="input-group">
+					<input type="text" name="q" value="{{request.GET.q}}" class="form-control input-lg input-rounded-search" placeholder="Search for...">
+					<span class="input-group-btn">
+						<input class="btn btn-info btn-lg input-rounded-btn" type="submit" value="SEARCH">SEARCH</input>
+					</span>
+				</div><!-- /input-group -->
+			</form>
+		</div>
+		<!-- EOC -->
+
 		<div class="row">
 			{% for post in posts %}
 			<div class="col-md-4 col-sm-12 grid-story">
@@ -25,7 +38,7 @@
 						</div><!-- story-caption -->
 					</div><!-- grad-overlay -->
 					<a class="thumbnail" href="{% url "journey_detail" slug=post.slug %}">View More</a>
-					<span class="editors-pick"><i class="fa fa-star"></i></span>    
+					<span class="editors-pick"><i class="fa fa-map-marker"></i></span>    
 				</div>
 			</div>
 			{% endfor %}
@@ -39,17 +52,17 @@
 					<!-- PAGINATION -->
 					<nav>
 						<ul class="pager">
-						    {% if posts.has_previous %}
-						    	<li class="previous"><a href="?page={{ posts.previous_page_number }}"><span aria-hidden="true">&larr;</span> Older</a></li>
-						    {% endif %}
+							{% if posts.has_previous %}
+							<li class="previous"><a href="?page={{ posts.previous_page_number }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+							{% endif %}
 
-						    <span class="current">
-						        Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
-						    </span>
+							<span class="current">
+								Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+							</span>
 
-						    {% if posts.has_next %}
-						    	<li class="next"><a href="?page={{ posts.next_page_number }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
-						    {% endif %}
+							{% if posts.has_next %}
+							<li class="next"><a href="?page={{ posts.next_page_number }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+							{% endif %}
 						</ul>
 					</nav>
 					<!-- EOC -->
@@ -60,5 +73,5 @@
 	</div>
 </div>
 <!-- EOC -->
-	
+
 {% endblock %}

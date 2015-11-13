@@ -10,10 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}">
 	<!-- EOC -->
 
-	<!-- INCLUDE KNOCKOUT JS -->
-	<script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.3.0.js"></script>
-	<!-- EOC -->
-	
 	<!-- TELL BROWSER, THIS SITE IS MOBILE READY -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- EOC -->
@@ -22,7 +18,7 @@
 </head>
 <header>
 
-	<nav class="navbar navbar-custom-2 navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -56,7 +52,7 @@
 							{% else %}
 							<a href="{{ request.META.HTTP_NAME }}/accounts/register/" class="btn purple-bg-rounded btn-padding"><i class="fa fa-user-secret fa-lg"></i> Join the Dark Side</a>
 							{% endif %}
-							<a href="{{ request.META.HTTP_NAME }}/accounts/register/" class="btn blue-bg-rounded btn-padding"><i class="fa fa-pencil fa-lg"></i> Write Journey</a>
+							<a href="{{ request.META.HTTP_NAME }}/journey/new/" class="btn blue-bg-rounded btn-padding"><i class="fa fa-pencil fa-lg"></i> Write Journey</a>
 						</form>
 					</li>
 				</ul>
@@ -101,18 +97,6 @@
 	<!-- INCLUDE ALLJAVASCRIPT -->
 	<script type="text/javascript" src="{% static "js/jquery-1.11.3.min.js" %}"></script>
 	<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
-	<!-- EOC -->
-
-	<!-- JQUERY FOR SLUG DASH -->
-	<script type="text/javascript">
-		$('#id_title').bind('keyup keypress blur', function() {  
-			var myStr = $(this).val()
-			myStr=myStr.toLowerCase();
-			myStr=myStr.replace(/[^a-zA-Z0-9\.]+/g,"-");
-
-			$('#id_slug').val(myStr); 
-		});
-	</script>
 	<!-- EOC -->
 
 </footer>

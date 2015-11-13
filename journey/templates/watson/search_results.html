@@ -1,0 +1,38 @@
+{% extends "journey/base_search.html" %}
+{% load staticfiles %}
+{% block title %}Journey Archive | Proffesional Weekend!{% endblock %}
+{% block content %}
+{% load watson %}
+
+<div class="search-page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="search-header">
+                    <img src="{% static "img/sirphone-orange-bubble.png" %}" />
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="search-result-wrapper">
+                    <div class="search-result">
+                        <title>Search results{% if query %} for &ldquo;{{query}}&rdquo;{% endif %}</title>
+
+                        <h4>#Search results{% if query %} for &ldquo;{{query}}&rdquo;{% endif %}</h4>
+                        {% if search_results %}
+                            {% search_results search_results %}
+                        {% else %}
+                            {% if query %}
+                                <p><em>There are no results to display.</em></p>
+                                <p><em>Try entering a less specific search term.</em></p>
+                            {% else %}
+                                <p><em>Please enter a query in the search form.</em></p>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

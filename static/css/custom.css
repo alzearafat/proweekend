@@ -673,6 +673,20 @@ p#homepage-footer-jogja-createdat {
     padding-bottom: 10px;
 }
 
+.search-form {
+    padding: 0px 300px 50px 300px;
+}
+
+.input-rounded-search {
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+}
+
+.input-rounded-btn {
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+}
+
 /* ---------- EOC --------- */
 
 
@@ -799,6 +813,8 @@ p#homepage-footer-jogja-createdat {
 
 .story-new-wrap .editors-pick {
     padding: 4px 8px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
 }
 .story-new-wrap span {
     background-color: #EC2833;
@@ -1019,6 +1035,26 @@ p#homepage-footer-jogja-createdat {
 /* ---------- EOC --------- */
 
 
+/*SEARCH PAGE*/
+
+.search-header {
+    text-align: right;
+    padding-bottom: 100px;
+}
+
+.search-page-wrapper {
+    margin-top: 50px;
+    margin-bottom: 200px;
+    height: 50vh;
+}
+
+.search-result-wrapper {
+    padding-top: 100px;
+}
+
+/* ---------- EOC --------- */
+
+
 /*REGISTRATION COMPLETE*/
 
 .reg-complete-wrapper {
@@ -1145,6 +1181,18 @@ p#homepage-footer-jogja-createdat {
         padding: 10px 0px 10px 0px;
     }
 
+    .search-form {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .header-text-journey-archive {
+        padding-top: 70px;
+    }
+
+    #journey-h1 {
+        font-size: 2em;
+    }
+
 }
 
 @media only screen and (max-width : 480px) {
@@ -1239,7 +1287,27 @@ p#homepage-footer-jogja-createdat {
         padding: 10px 0px 10px 0px;
     }
 
+    .search-form {
+        padding: 0px 0px 30px 0px;
+    }
+
+    .header-text-journey-archive {
+        padding-top: 70px;
+    }
+
+    #journey-h1 {
+        font-size: 2em;
+    }
+
 }
 
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    
+    .search-form {
+        padding: 0px 0px 30px 0px;
+    }
+
+}
 
 /* ---------- EOC --------- */
