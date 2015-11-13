@@ -3,6 +3,17 @@
 {% block content %}
 {{ form.media }}
 
+	<script type="text/javascript">
+		$('#id_title').bind('Title Slug', function() 
+			{  
+				var myStr = $(this).val()
+					myStr=myStr.toLowerCase();
+					myStr=myStr.replace(/[^a-zA-Z0-9\.]+/g,"");
+
+			    $('#id_slug').val(myStr); 
+			});
+	</script>
+
 <div class="journey-add-wrapper">
 	<div class="container">
 		<div class="row">
@@ -38,7 +49,7 @@
 						</div>
 				  	</div>
 				  	<div class="form-group">
-				    	<label for="title">Author</label>
+				    	<label for="author">Author</label>
 				    	{% if user.is_authenticated %}
 				    	<fieldset disabled>
 				    		<input type="text" id="id_author" class="form-control input-lg" name="author" value="{{ user.get_username }}"></input>
