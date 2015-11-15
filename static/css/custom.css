@@ -863,6 +863,10 @@ p#homepage-footer-jogja-createdat {
     margin:auto;
 }
 
+.disqus-wrapper-journey {
+    padding: 0px 170px 0px 170px;
+}
+
 /* ---------- EOC --------- */
 
 
@@ -1193,6 +1197,10 @@ p#homepage-footer-jogja-createdat {
         font-size: 2em;
     }
 
+    .disqus-wrapper-journey {
+        padding: 10px 0px 10px 0px;
+    }
+
 }
 
 @media only screen and (max-width : 480px) {
@@ -1299,6 +1307,10 @@ p#homepage-footer-jogja-createdat {
         font-size: 2em;
     }
 
+    .disqus-wrapper-journey {
+        padding: 10px 0px 10px 0px;
+    }
+
 }
 
 /* Small Devices, Tablets */
@@ -1306,6 +1318,10 @@ p#homepage-footer-jogja-createdat {
     
     .search-form {
         padding: 0px 0px 30px 0px;
+    }
+
+    .disqus-wrapper-journey {
+        padding: 10px 0px 10px 0px;
     }
 
 }
