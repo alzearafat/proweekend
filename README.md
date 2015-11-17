@@ -1,7 +1,7 @@
 <img src="http://i65.tinypic.com/30d87xi.jpg" align="left" width="220px" height="220px"/>
 <img align="left" width="0" height="192px" hspace="10"/>
 
-> The <a href="http://proweekend.org/">Proffesional Weekend v2.3</a> Official Code Base
+> The <a href="http://proweekend.org/">Proffesional Weekend v2.4</a> Official Code Base
 
 [![MIT License](https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square)](/LICENSE.md) [![Pewe Version](https://img.shields.io/pypi/pyversions/Django.svg)](http://proweekend.org/) [![Pewe Build Status](https://img.shields.io/badge/pewe--v2.4-90%25-orange.svg)](https://travis-ci.org/oh-my-fish/oh-my-fish) [![App Status](https://img.shields.io/pypi/status/Django.svg)](http://proweekend.org/)
 
@@ -71,7 +71,7 @@ Template: https://github.com/alzearafat/pewe-web/wiki/Settings.py-Template
 TO-DO LIST
 ---------------
 
-1. Add search engine (DONE)
+1. Add search engine (DONE!)
 2. Add pagination (DONE!)
 3. Add Single Author Profile
 4. ...
